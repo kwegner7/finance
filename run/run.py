@@ -137,10 +137,10 @@ if __name__ == '__main__':
         subset  = ViewMonth(model)         
         html = subset.pages(os.getcwd()+'/out/html/Month')
         subset  = ViewMonthSummary(model)         
-        html = subset.pages(os.getcwd()+'/publish')
+        html = subset.pages(os.getcwd()+'/../publish')
         os.rename(
-            os.getcwd()+'/publish/out.html',
-            os.getcwd()+'/publish/MonthSummary.html')
+            os.getcwd()+'/../publish/out.html',
+            os.getcwd()+'/../publish/MonthSummary.html')
         subset  = ViewSubCategory(model)         
         html = subset.pages(os.getcwd()+'/out/html/Subcategory')
         subset  = ViewSubCategorySummary(model)         
@@ -198,10 +198,10 @@ if __name__ == '__main__':
 
             # obtain views of the model            
             view = Finance.ViewMonth(model)
-            html = view.pages(os.getcwd()+'/publish')
+            html = view.pages(os.getcwd()+'/../publish')
             os.rename(
-                os.getcwd()+'/publish/out.html',
-                os.getcwd()+'/publish/MonthDetails.html')
+                os.getcwd()+'/../publish/out.html',
+                os.getcwd()+'/../publish/MonthDetails.html')
             
         
         exit()

@@ -863,19 +863,19 @@ class Colors():
         if self.first_time_color:
             self.first_time_color = False
             self.colors = list()
+            self.colors.append('#CCFFCC') # green
             self.colors.append('#FEF1B5') # yellow
             self.colors.append('#EED2EE') # purple
             self.colors.append('#DAF4F0') # bluish
             self.colors.append('#FFDAB9') # orange-brown
             self.colors.append('#E6E6FA') # purple-blue
-            self.colors.append('#CCFFCC') # green
     
+            self.colors.append('#CCFFCC') # green
             self.colors.append('#FEF1B5') # yellow
             self.colors.append('#EED2EE') # purple
             self.colors.append('#DAF4F0') # bluish
             self.colors.append('#FFDAB9') # orange-brown
             self.colors.append('#E6E6FA') # purple-blue
-            self.colors.append('#CCFFCC') # green
             self.colors.append('lightpink')
             self.which_color = len(self.colors)-1
         self.which_color += 1

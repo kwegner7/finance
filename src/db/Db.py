@@ -2,14 +2,18 @@
     Db
 '''
 
-import os, csv, tempfile, commands, sys
+import os, csv, tempfile, commands, sys, hashlib, shutil
+from datetime import datetime
 from helper import Container
+import db
 from db import CsvObject
 from abc import ABCMeta, abstractmethod
+from apt_pkg import md5sum
+
 __all__ = list()
 
 #=========================================================================
-# MonitorField
+# class MonitorField
 #=========================================================================
 class MonitorField():
     
@@ -78,7 +82,70 @@ class MonitorField():
                 if (self.current_fields[field] != self.next_fields[field]):
                     return True
         return False
+                
+#===============================================================================
+# class Scripts
+#===============================================================================
+class Scripts():
 
+    @classmethod    
+    def timeStampFile(cls, folder):
+
+        if not os.path.exists(folder) or not os.path.isdir(folder): 
+            print "The folder to timestamp does not exist", folder
+            return
+
+        text = datetime.now().strftime('Updated on %Y-%m-%d at %H:%M:%S')   
+        new_file = os.path.join(folder, text) 
+        
+        # find a file under this folder that matches "Updated on"
+        original_file = str('')
+        for item in os.listdir(folder):
+            fullpath = os.path.join(folder, item)
+            if os.path.isfile(fullpath):
+                if (item.startswith('Updated on ')
+                and item.startswith(' at ',21)):
+                    original_file = fullpath
+                            
+        # append timestamp to the end of the file and rename the file
+        if len(original_file) == 0:
+            with open(new_file, "w") as timestamp:
+                timestamp.write(text+'\n')
+        else:
+            os.rename(original_file, new_file)
+            with open(new_file, "a") as timestamp:
+                timestamp.write(text+'\n')
+        return
+            
+
+    @classmethod    
+    def importPictures(cls, picture_tree, flat_folder):
+
+        if False:
+            folder = '/media/kurt/Linux3TB/pictures/Kurts-Blue-Nikon/SD1'
+            Scripts.timeStampFile(folder)
+        
+        if not os.path.exists(picture_tree): 
+            print "The import tree does not exist", picture_tree
+            return
+        
+        if not os.path.exists(flat_folder): 
+            print "The destination folder does not exist", flat_folder
+            return
+
+        # The existing destination flat folder to receive the pictures        
+        flat_folder_csv = SetOfFiles.generateCsvSetOfFiles(flat_folder)
+        existing_files = SetOfFiles(flat_folder_csv)
+        existing_files.internalize()
+
+        # This source folder is the base of a tree containing pictures
+        picture_tree_csv = SetOfFiles.generateCsvSetOfFiles(picture_tree)
+        importing_files = SetOfFiles(picture_tree_csv)
+        importing_files.collectFilesIntoFolder(existing_files, flat_folder)
+
+        print "DONE"
+        return
+    
 #===============================================================================
 # DbClasses
 #===============================================================================
@@ -224,10 +291,11 @@ class DbMethods(DbClasses):
                 print msg
         return              
 
+    @classmethod    
     def temporaryCsvFile(self):
         os.system ("mkdir --parents /tmp/csv")
         return tempfile.NamedTemporaryFile(
-            delete=False,prefix='CSV-',suffix='.csv',dir='/tmp/csv/').name
+            delete=True,prefix='CSV-',suffix='.csv',dir='/tmp/csv/').name
         
     def copyCsvFile(self, original_csv_file, internal_csv_file):
         os.system("cp "+original_csv_file+" "+internal_csv_file)        
@@ -263,6 +331,7 @@ class DbMethods(DbClasses):
         return True, number_of_fields
 
     def checkCsvFile(self, filename, format):
+        return
         number_columns_ok, number_columns = \
             self.numberFields(filename, format.dialect)
         dialect = format.dialect
@@ -434,8 +503,16 @@ class DbMethods(DbClasses):
 #                      def htmlPresentation(self, dirpath): pass
 #                        MapGenerate
 #===============================================================================
+
+#===============================================================================
+# Db
+#===============================================================================
 __all__ += ['Db']
 class Db(DbMethods):
+    
+    def __init__(self, filename, fieldnames, dialect, skip_first_record): 
+        CsvObject.CsvObject.__init__(self, 
+            filename, fieldnames, dialect, skip_first_record)
     
     #===========================================================================
     # const class CsvFormat
@@ -448,10 +525,6 @@ class Db(DbMethods):
         dialect = CsvObject.CsvBackquoteDialect()
         skip_first_record = False
 
-    def __init__(self, filename, fieldnames, dialect, skip_first_record): 
-        CsvObject.CsvObject.__init__(self, 
-            filename, fieldnames, dialect, skip_first_record)
-                    
 #===============================================================================
 # Abstract Methods
 #===============================================================================
@@ -542,7 +615,7 @@ class Transformer(Db, TransformerAbstract):
         
         # possibly reorder after transform        
         if len(self.sortAfterTransform()) != 0:
-            self.reorderCsvFile(self.sortBeforeTransform(), self.filename)
+            self.reorderCsvFile(self.sortAfterTransform(), self.filename)
             self.printReorder()
         
         return None
@@ -615,7 +688,7 @@ class View(Transformer, ViewAbstract):
  
     # constructor
     def __init__(self, master_db, format=Db.CsvFormatBackquote):
-        if isinstance(master_db, Db):
+        if isinstance(master_db, Transformer):
             self.master_first_row = master_db.first_row
             self.master_last_row = master_db.last_row
         else:
@@ -675,4 +748,131 @@ class Reference(Db, OriginalAbstract):
             format.dialect,
             format.skip_first_record)  
         self.checkCsvFile(self.filename, format)
-                                                             
+ 
+#===============================================================================
+# SetOfFiles
+#===============================================================================
+__all__ += ['SetOfFiles']
+class SetOfFiles(Reference):
+    
+    def __init__(self, csv_file, format=Db.CsvFormatBackquote):
+        Reference.__init__(self, csv_file, format)
+        print "CONSTRUCTING SetOfFiles FROM THE CSV FILE", csv_file, "WITH FIELDS", self.fieldNames()
+        #self.internalize()
+        pass
+
+    @classmethod    
+    def generateCsvSetOfFiles(cls, top_folder):
+        print "\nWALKING THE TREE", top_folder+",", "SEARCHING FOR PICTURES"
+        csv_fullpath = DbMethods.temporaryCsvFile()
+        csv = open(csv_fullpath, 'w')    
+        for dirpath, dirnames, files in os.walk(top_folder):
+            for name in files:
+                if (name.lower().endswith('bmp')
+                or  name.lower().endswith('gif')
+                or  name.lower().endswith('jpg')
+                or  name.lower().endswith('png')
+                or  name.lower().endswith('tiff')):
+                    row = dirpath+'`'+name+'\n'
+                    csv.write(row)    
+        csv.close()
+        print "CSV FOLDER/FILE HAS BEEN GENERATED AT", csv.name 
+        return csv_fullpath
+
+    def getChecksum(self, fullpath):
+        with open(fullpath) as file_to_check:
+            data = file_to_check.read()    
+            checksum = hashlib.md5(data).hexdigest()
+        return checksum
+            
+    def internalize(self):
+        print "READING CSV TO INTERNALIZE SET OF FILE CHECKSUMS"
+        self.hash_set = set()
+        self.openRead();
+        for row in self.reader:
+            fullpath = os.path.join(row['Folder'], row['File'])
+            self.hash_set.add(self.getChecksum(fullpath))
+        self.closeRead();
+        return
+
+    def collectFilesIntoFolder(self, flat_set_of_files, flat_folder, practicing=False):
+        print "WRITING EACH FILE FROM THE TREE INTO THE FLAT FOLDER"
+        hash_set = flat_set_of_files.hash_set
+        original_number_flat_files = len(hash_set)
+        count_tree_files = int(0)
+        count_exists_already = int(0)
+        count_duplicate_name = int(0)
+        count_files_added = int(0)
+        os.system("mkdir --parents "+flat_folder)
+        self.openRead();
+        for row in self.reader:
+            count_tree_files += 1
+            from_filename = os.path.join(row['Folder'], row['File'])
+            to_filename = os.path.join(flat_folder, row['File'])
+            checksum = self.getChecksum(from_filename)
+            if checksum in hash_set:
+                count_exists_already += 1
+            elif os.path.exists(to_filename):
+                count_duplicate_name += 1
+                thru_name = os.path.splitext(to_filename)[0]
+                dot_ext = os.path.splitext(to_filename)[1]
+                new_filename = thru_name + '_' + checksum + dot_ext
+                if not practicing:
+                    shutil.copy2(from_filename, new_filename)
+                hash_set.add(checksum)
+            else:
+                count_files_added += 1
+                if not practicing:
+                    shutil.copy2(from_filename, flat_folder)
+                hash_set.add(checksum)
+        self.closeRead();
+        final_number_flat_files = len(hash_set)
+        if not practicing and (final_number_flat_files > original_number_flat_files):
+            Scripts.timeStampFile(flat_folder)
+        print
+        print "  {0:>6d} pictures originally in the destination folder".format(original_number_flat_files)
+        print "  {0:>6d} pictures imported into the destination folder".format(count_files_added)
+        print "  {0:>6d} pictures renamed due to duplicate name".format(count_duplicate_name)
+        print "  {0:>6d} pictures finally in the destination folder".format(final_number_flat_files)
+        print "  {0:>6d} pictures existed already in the destination folder".format(count_exists_already)
+        print "  {0:>6d} pictures to be imported".format(count_tree_files)
+        print
+        return
+
+    def set_union(self, other_db):
+        diff = SetOfFiles(self.temporaryCsvFile())   
+        other_db.openRead(); diff.openWrite();
+        for row in other_db.reader:
+            fullpath = row['Folder']+'/'+row['File']
+            checksum = self.getChecksum(fullpath)
+            if not checksum in self.hash_set:
+                diff.writer.writerow([row[x] for x in diff.fieldnames])
+        other_db.closeRead(); diff.closeWrite();
+        return diff
+        
+    def set_intersection(self, other_db):
+        self.append(other_db)
+        return
+        
+    def set_difference(self, other_db):
+        self.append(other_db)
+        return
+        
+    # an element of a database is an object
+    # whose attributes are stored in a row of the csv file
+    # we must transform row to object and object to row
+    # Finance is a set of Transactions
+    # SpecialCamp is a set of AdministerMeds
+    # Jpg is a set of JPG picture files
+    def isElementOfThisSet(self, row):
+        return True
+
+    def fieldNames(self): return list([
+        #"Checksum",
+        #"Date",
+        #"Camera",
+        "Folder",
+        "File",
+    ])
+                    
+                                                            

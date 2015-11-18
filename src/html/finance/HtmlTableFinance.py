@@ -655,6 +655,7 @@ class HtmlGeneric(UsualDefaults):
         UsualDefaults.__init__(self, db, False, folder_html)
 
     def mapFieldnameToStyle(self, fieldname):
+        if fieldname == 'Count': return 'whiter'
         return 'nowrapl'
                                    
     def columns(self):
@@ -665,7 +666,7 @@ class HtmlGeneric(UsualDefaults):
             nature_of_columns.append(next)            
         return nature_of_columns
 
-    def summaryFollowingSubsection(self, bottom_row_prev_section, is_final_row=False):
+    def summaryFollowingSubsection__(self, bottom_row_prev_section, is_final_row=False):
         self.writeRowsOfColor(self.background_color, 1, False)
         
         column = 0
@@ -679,6 +680,7 @@ class HtmlGeneric(UsualDefaults):
         self.insertOneSummaryRecord(stuff, self.background_color, 'normal')          
         self.writeRowsOfColor(self.background_color, 1, False)
         return None
+        
 #==============================================================================
 # HTML table showing all columns of the csv file
 #==============================================================================

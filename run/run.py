@@ -13,7 +13,7 @@ sys.path[0] = src_base
 os.chdir(run_path)
 
 #===============================================================================
-# imports relative to /proj/finance/python
+# imports relative to /proj/src/
 #===============================================================================
 from db.Db import Db, Original
 from db.finance.Original import OrigBeyondBanking, OrigFinance, OrigMint
@@ -203,5 +203,34 @@ if __name__ == '__main__':
                 os.getcwd()+'/../publish/out.html',
                 os.getcwd()+'/../publish/MonthDetails.html')
             
-        
-        exit()
+#===============================================================================
+# Organize JPGs
+#===============================================================================
+if False:
+
+    import os            
+    from db.finance import View
+    from db.Db import SetOfFiles
+ 
+    print "MAKE A LIST OF THE MASTER TREE FILES"
+    os.system("/home/kurt/Documents/tools/jpg-import.bsh /test/MASTER/ /proj/jpg/in/MASTER.csv" )
+    print "MAKE A LIST OF THE IMPORT TREE FILES"
+    os.system("/home/kurt/Documents/tools/jpg-import.bsh /test/IMPORT/ /proj/jpg/in/IMPORT.csv" )
+    print "MAKE A REFERENCE TO THE CSV MASTER LIST OF FILES"
+    print "AND CREATE INTERNAL HASH TABLE SET OF CHECKSUMS"
+    master = SetOfFiles('/proj/jpg/in/MASTER.csv')
+    print "MAKE A REFERENCE TO THE CSV IMPORT LIST OF FILES"
+    print "AND CREATE INTERNAL HASH TABLE SET OF CHECKSUMS"
+    imprt  = SetOfFiles('/proj/jpg/in/IMPORT.csv')
+    diff   = master.set_union(imprt)
+    print "CREATE NEW CSV FILE THAT IS UNION LIST OF FILENAMES"
+    master.append(diff)
+    print "CREATE HTML VIEW OF THIS UNION OF FILENAMES"
+    view   = View.ViewGeneric(master)
+    html   = view.pages(os.getcwd()+'/out/html/jpg-diff')
+    
+    
+    
+print "\nCHECKING ..."            
+os.system("bash --rcfile ~/.bashrc -c /home/kurt/Documents/tools/check.bsh")   
+exit()

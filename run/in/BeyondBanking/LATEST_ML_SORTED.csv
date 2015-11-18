@@ -5,9 +5,9 @@ Beyond Banking`2013-10-15`-25.00`BillPay`Bill Payment`OC INTERNATIONAL00880517
 Beyond Banking`2013-10-15`-25.00`BillPay`Bill Payment`PIKES PEAK REGIO00880524
 Beyond Banking`2013-10-15`-400.00`Checking`Check 805`RYAN SARGENT 805
 Beyond Banking`2013-10-15`-42.50`Checking`Check 806`LARRY BERNARD 806
+Beyond Banking`2013-10-15`-50.00`BillPay`Bill Payment`MISSION TO THE W00880514
 Beyond Banking`2013-10-15`-500.00`BillPay`Bill Payment`JOHN VIOLA      00880523
 Beyond Banking`2013-10-15`-500.00`Checking`Check 797`SAN DIEGO JAPANE 797
-Beyond Banking`2013-10-15`-50.00`BillPay`Bill Payment`MISSION TO THE W00880514
 Beyond Banking`2013-10-16`-25.00`BillPay`Bill Payment`HARVEST FAMILY C00880512
 Beyond Banking`2013-10-16`-50.00`Other`Pre Authdebit`AFRICA INLAND MI
 Beyond Banking`2013-10-16`-65.97`Other`Pre Authdebit`COMCAST
@@ -25,9 +25,9 @@ Beyond Banking`2013-10-23`-25.00`BillPay`Bill Payment`THE LIVING ROOM 00880518
 Beyond Banking`2013-10-23`-50.00`BillPay`Bill Payment`YEKOPE MINISTRIE00880519
 Beyond Banking`2013-10-24`-48.07`Other`Pre Authdebit`INTERMOUNTAIN RU
 Beyond Banking`2013-10-25`-7,257.72`Other`Pre Authdebit`CHASE
+Beyond Banking`2013-10-28`-100.00`BillPay`Bill Payment`SFVHC BUILDING F00880516
 Beyond Banking`2013-10-28`-1,000.00`BillPay`Bill Payment`DAVIDA WEGNER   00880488
 Beyond Banking`2013-10-28`-1,000.00`Checking`Check 802`DAVIDA WEGNER 802
-Beyond Banking`2013-10-28`-100.00`BillPay`Bill Payment`SFVHC BUILDING F00880516
 Beyond Banking`2013-10-28`-14.00`Checking`Check 807`SD CO RECORDER 807
 Beyond Banking`2013-10-28`-25.00`Other`Pre Authdebit`World Gospel Mis
 Beyond Banking`2013-10-28`-500.00`BillPay`Bill Payment`DAVIDA WEGNER   00880522
@@ -119,9 +119,9 @@ Beyond Banking`2013-12-27`-25.00`Other`Pre Authdebit`World Gospel Mis
 Beyond Banking`2013-12-27`-30.82`Other`Pre Authdebit`NSTAR
 Beyond Banking`2013-12-31`0.23`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 11/29 THRU 12/31
 Beyond Banking`2013-12-31`-133.88`Other`Pre Authdebit`BLACK HILLS UTLH
-Beyond Banking`2013-12-31`16.98`DividendAndInterest`Dividend`TRANS ASSET ALL GRW A PAY DATE 12/30/2013
 Beyond Banking`2013-12-31`-16.98`Other`Acum For Mo Ck`TRANS ASSET ALL GRW A ACCUM FOR MONTHLY CK
 Beyond Banking`2013-12-31`-16.98`Other`Check`MONTHLY AMT ISSUED
+Beyond Banking`2013-12-31`16.98`DividendAndInterest`Dividend`TRANS ASSET ALL GRW A PAY DATE 12/30/2013
 Beyond Banking`2013-12-31`16.98`Other`Total Mo Accum`TOTAL DIV/INT PAYMENTS
 Beyond Banking`2013-12-31`5,017.72`FundReceipts`DDS`BENEFIT PAYMENTS
 Beyond Banking`2014-01-02`-50.00`Other`Pre Authdebit`WOODLAND PARK CO
@@ -300,8 +300,8 @@ Beyond Banking`2014-05-15`-50.00`Other`Pre Authdebit`AFRICA INLAND MI
 Beyond Banking`2014-05-16`-67.97`Other`Pre Authdebit`COMCAST
 Beyond Banking`2014-05-19`-1.50`Other`Pre Authdebit`BANK OF AMERICA
 Beyond Banking`2014-05-19`-2,086.40`Other`Pre Authdebit`CHASE
-Beyond Banking`2014-05-19`3,000.00`FundTransfers`Funds Transfer`TR FROM ML 22D12493
 Beyond Banking`2014-05-19`-3,000.00`Other`Pre Authdebit`CHASE
+Beyond Banking`2014-05-19`3,000.00`FundTransfers`Funds Transfer`TR FROM ML 22D12493
 Beyond Banking`2014-05-19`-35.76`Other`Pre Authdebit`NATIONAL GRID NE
 Beyond Banking`2014-05-19`-803.13`BillPay`Bill Payment`JOHN VIOLA      00880638
 Beyond Banking`2014-05-20`-149.33`Other`Pre Authdebit`BANK OF AMERICA
@@ -608,12 +608,12 @@ Beyond Banking`2014-12-30`-246.27`ATM`Cash Machine`ATM 613267 BOGOR             
 Beyond Banking`2014-12-30`-246.27`ATM`Cash Machine`ATM 655147 BOGOR              12/30 3,000,000.00 IDR Or $241.44 + $4.83 Int.Trn.Fee
 Beyond Banking`2014-12-30`-300.00`BillPay`Bill Payment`DANNY PEREZ     00880749
 Beyond Banking`2014-12-31`0.70`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 11/28 THRU 12/31
-Beyond Banking`2014-12-31`12.07`DividendAndInterest`Dividend`TRANS ASSET ALL GRW A PAY DATE 12/30/2014
 Beyond Banking`2014-12-31`-12.07`Other`Acum For Mo Ck`TRANS ASSET ALL GRW A ACCUM FOR MONTHLY CK
+Beyond Banking`2014-12-31`12.07`DividendAndInterest`Dividend`TRANS ASSET ALL GRW A PAY DATE 12/30/2014
 Beyond Banking`2014-12-31`-300.00`BillPay`Bill Payment`DAVIDA WEGNER   00880748
 Beyond Banking`2014-12-31`4,727.92`FundReceipts`DDS`BENEFIT PAYMENTS
-Beyond Banking`2014-12-31`53.31`DividendAndInterest`Lg Tm Cap Gain`TRANS ASSET ALL GRW A PAY DATE 12/30/2014
 Beyond Banking`2014-12-31`-53.31`Other`Acum For Mo Ck`TRANS ASSET ALL GRW A ACCUM FOR MONTHLY CK
+Beyond Banking`2014-12-31`53.31`DividendAndInterest`Lg Tm Cap Gain`TRANS ASSET ALL GRW A PAY DATE 12/30/2014
 Beyond Banking`2014-12-31`-65.38`Other`Check`MONTHLY AMT ISSUED
 Beyond Banking`2014-12-31`65.38`Other`Total Mo Accum`TOTAL DIV/INT PAYMENTS
 Beyond Banking`2015-01-02`-50.00`Other`Pre Authdebit`WOODLAND PARK CO
@@ -712,8 +712,8 @@ Beyond Banking`2015-03-12`-50.00`BillPay`Bill Payment`MISSION TO THE W00880771
 Beyond Banking`2015-03-16`-200.00`BillPay`Bill Payment`DAVIDA WEGNER   00880670
 Beyond Banking`2015-03-16`-25.00`BillPay`Bill Payment`JEMS            00880779
 Beyond Banking`2015-03-16`-300.00`BillPay`Bill Payment`DAVIDA WEGNER   00880781
-Beyond Banking`2015-03-16`-500.00`BillPay`Bill Payment`DAVIDA WEGNER   00880764
 Beyond Banking`2015-03-16`-50.00`Other`Pre Authdebit`AFRICA INLAND MI
+Beyond Banking`2015-03-16`-500.00`BillPay`Bill Payment`DAVIDA WEGNER   00880764
 Beyond Banking`2015-03-16`-69.79`Other`Pre Authdebit`COMCAST
 Beyond Banking`2015-03-17`-25.00`BillPay`Bill Payment`HARVEST FAMILY C00880769
 Beyond Banking`2015-03-17`-50.00`BillPay`Bill Payment`YEKOPE MINISTRIE00880777
@@ -802,8 +802,8 @@ Beyond Banking`2015-05-12`-25.00`BillPay`Bill Payment`HARVEST FAMILY C00880804
 Beyond Banking`2015-05-12`-50.00`BillPay`Bill Payment`MISSION TO THE W00880806
 Beyond Banking`2015-05-13`-25.00`BillPay`Bill Payment`OC INTERNATIONAL00880809
 Beyond Banking`2015-05-13`-88.14`Other`Pre Authdebit`VERIZON WIRELESS
-Beyond Banking`2015-05-14`5,000.00`Other`Journal Entry`DEPOSIT TRF FROM 22D81993
 Beyond Banking`2015-05-14`-500.00`BillPay`Bill Payment`THE NEW HORIZONS00880822
+Beyond Banking`2015-05-14`5,000.00`Other`Journal Entry`DEPOSIT TRF FROM 22D81993
 Beyond Banking`2015-05-15`-50.00`Other`Pre Authdebit`AFRICA INLAND MI
 Beyond Banking`2015-05-18`-25.00`BillPay`Bill Payment`JEMS            00880813
 Beyond Banking`2015-05-18`-25.00`BillPay`Bill Payment`SFVHC BUILDING F00880808
@@ -868,8 +868,8 @@ Beyond Banking`2015-07-01`-191.42`ATM`Cash Machine`ATM 164039 BANDUNG           
 Beyond Banking`2015-07-01`-50.00`BillPay`Bill Payment`YEKOPE MINISTRIE00880832
 Beyond Banking`2015-07-01`-50.00`Other`Pre Authdebit`WOODLAND PARK CO
 Beyond Banking`2015-07-01`-84.36`Other`Pre Authdebit`TDS
-Beyond Banking`2015-07-02`-1,000.00`Other`Pre Authdebit`5/3 MORTGAGE LN
 Beyond Banking`2015-07-02`-100.00`BillPay`Bill Payment`LION OF JUDAH MI00880824
+Beyond Banking`2015-07-02`-1,000.00`Other`Pre Authdebit`5/3 MORTGAGE LN
 Beyond Banking`2015-07-02`-25.00`BillPay`Bill Payment`THE LION OF JUDA00880823
 Beyond Banking`2015-07-06`-230.01`ATM`Cash Machine`ATM 910744 BOGOR              07/06 3,000,000.00 IDR Or $225.50 + $4.51 Int.Trn.Fee
 Beyond Banking`2015-07-06`-25.00`Other`Pre Authdebit`CAMPUS CRUSADE F

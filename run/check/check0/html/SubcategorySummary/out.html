@@ -1,0 +1,1634 @@
+<html>
+<head>
+<style type="text/css">
+#OneByTwo 
+{
+   width:100%;
+   font-size:14px;
+   table-layout:auto;
+   border-collapse:collapse;
+   font-family:"Lucida Console", Monaco, monospace;
+   line-height:14px;
+}
+#CsvTable 
+{
+   width:0%;
+   font-size:12px;
+   table-layout:auto;
+   border-collapse:collapse;
+   font-family:"Lucida Console", Monaco, monospace;
+   line-height:12px;
+}
+#CsvTable th
+{
+   padding:3px 10px 3px 10px;
+   font-size:1.0em;
+   color:black;
+   border:1px none #DCDCDC;
+   font-style:italic;
+   background-color:#DCDCDC;
+   text-align:left;
+}
+#CsvTable tr
+{
+   color:black;
+   font-size:1.0em;
+   font-weight:normal;
+   background-color:white;
+}
+#CsvTable td
+{
+   padding:3px 10px 3px 10px;
+   border:1px none grey;
+   text-align:center;
+}
+#CsvTable td.left
+{
+   text-align:left;
+}
+#CsvTable td.right
+{
+   text-align:right;
+}
+#CsvTable td.green
+{
+   color:green;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.funds
+{
+   color:green;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.fundsg
+{
+   color:green;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.fundsr
+{
+   color:red;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.whiter
+{
+   color:black;
+   white-space:nowrap;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.whitel
+{
+   color:black;
+   white-space:nowrap;
+   background-color:white;
+   text-align:left;
+}
+#CsvTable td.red
+{
+   color:red;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.center
+{
+   text-align:center;
+}
+#CsvTable td.nowrapl
+{
+   white-space:nowrap;
+   text-align:left;
+}
+#CsvTable td.nowrapr
+{
+   white-space:nowrap;
+   text-align:right;
+}
+#CsvTable td.nowrapc
+{
+   white-space:nowrap;
+   text-align:center;
+}
+#CsvTable td.date
+{
+   white-space:nowrap;
+   font-family:"Lucida Console", Monaco, monospace;
+   text-align:right;
+}
+#CsvTable td.hide
+{
+   background-color:white;
+   visibility:hidden;
+}
+</style>
+</head>
+<body style="font-size:14px; line-height:14px; margin:10px 1px 30px 100px;">
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=Banking></a>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Cash Withdrawal</td>
+  <td class=green>14.95</td>
+  <td class=red>-13,486.26</td>
+  <td class=red>-13,471.31</td>
+  <td class=nowrapr>55 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Check Deposit</td>
+  <td class=green>10,746.84</td>
+  <td class=green>0.00</td>
+  <td class=green>10,746.84</td>
+  <td class=nowrapr>48 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Check Voided</td>
+  <td class=green>7.59</td>
+  <td class=green>0.00</td>
+  <td class=green>7.59</td>
+  <td class=nowrapr>1 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Interest Received</td>
+  <td class=green>27.37</td>
+  <td class=green>0.00</td>
+  <td class=green>27.37</td>
+  <td class=nowrapr>61 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Investment Interaction with BB</td>
+  <td class=green>179.90</td>
+  <td class=red>-179.90</td>
+  <td class=green>0.00</td>
+  <td class=nowrapr>14 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Overdraft</td>
+  <td class=green>1,387.40</td>
+  <td class=red>-1,392.46</td>
+  <td class=red>-5.06</td>
+  <td class=nowrapr>8 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>Paypal</td>
+  <td class=green>3,269.89</td>
+  <td class=red>-16,400.00</td>
+  <td class=red>-13,130.11</td>
+  <td class=nowrapr>13 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>15,633.94</td>
+  <td class=red>-31,458.62</td>
+  <td class=red>-15,824.68</td>
+  <td class=nowrapr>200 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=CarExpense></a>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>Auto Insurance</td>
+  <td class=green>260.76</td>
+  <td class=red>-5,189.08</td>
+  <td class=red>-4,928.32</td>
+  <td class=nowrapr>73 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>Auto Repair</td>
+  <td class=green>0.00</td>
+  <td class=red>-8,003.39</td>
+  <td class=red>-8,003.39</td>
+  <td class=nowrapr>45 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>Gas Station</td>
+  <td class=green>0.00</td>
+  <td class=red>-3,311.76</td>
+  <td class=red>-3,311.76</td>
+  <td class=nowrapr>103 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>Parking and Tolls</td>
+  <td class=green>450.00</td>
+  <td class=red>-2,032.96</td>
+  <td class=red>-1,582.96</td>
+  <td class=nowrapr>88 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>Vehicle Registration</td>
+  <td class=green>0.00</td>
+  <td class=red>-355.03</td>
+  <td class=red>-355.03</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>710.76</td>
+  <td class=red>-18,892.22</td>
+  <td class=red>-18,181.46</td>
+  <td class=nowrapr>315 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=CharitableDonations></a>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>Churches</td>
+  <td class=green>0.00</td>
+  <td class=red>-13,068.00</td>
+  <td class=red>-13,068.00</td>
+  <td class=nowrapr>264 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>Missions</td>
+  <td class=green>0.00</td>
+  <td class=red>-51,916.66</td>
+  <td class=red>-51,916.66</td>
+  <td class=nowrapr>749 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>Wire Out</td>
+  <td class=green>0.00</td>
+  <td class=red>-11,930.00</td>
+  <td class=red>-11,930.00</td>
+  <td class=nowrapr>13 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>0.00</td>
+  <td class=red>-76,914.66</td>
+  <td class=red>-76,914.66</td>
+  <td class=nowrapr>1026 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=Clothing></a>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>Clothing Store</td>
+  <td class=green>1,916.10</td>
+  <td class=red>-13,325.18</td>
+  <td class=red>-11,409.08</td>
+  <td class=nowrapr>115 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>Jewelry Store</td>
+  <td class=green>0.00</td>
+  <td class=red>-6,822.24</td>
+  <td class=red>-6,822.24</td>
+  <td class=nowrapr>5 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>Shoe Store</td>
+  <td class=green>0.00</td>
+  <td class=red>-173.43</td>
+  <td class=red>-173.43</td>
+  <td class=nowrapr>3 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>1,916.10</td>
+  <td class=red>-20,320.85</td>
+  <td class=red>-18,404.75</td>
+  <td class=nowrapr>123 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=CreditCard></a>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>Pay Credit Card</td>
+  <td class=green>0.00</td>
+  <td class=red>-76,644.82</td>
+  <td class=red>-76,644.82</td>
+  <td class=nowrapr>81 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>Reward Money Back</td>
+  <td class=green>2,029.53</td>
+  <td class=green>0.00</td>
+  <td class=green>2,029.53</td>
+  <td class=nowrapr>17 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>2,029.53</td>
+  <td class=red>-76,644.82</td>
+  <td class=red>-74,615.29</td>
+  <td class=nowrapr>98 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=Entertainment></a>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>Amusement Park</td>
+  <td class=green>0.00</td>
+  <td class=red>-481.36</td>
+  <td class=red>-481.36</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>Site Seeing/Museums/Parks</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,684.54</td>
+  <td class=red>-1,684.54</td>
+  <td class=nowrapr>47 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>Skiing</td>
+  <td class=green>0.00</td>
+  <td class=red>-272.22</td>
+  <td class=red>-272.22</td>
+  <td class=nowrapr>8 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>Streaming</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,316.89</td>
+  <td class=red>-1,316.89</td>
+  <td class=nowrapr>88 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>Theatre</td>
+  <td class=green>0.00</td>
+  <td class=red>-304.00</td>
+  <td class=red>-304.00</td>
+  <td class=nowrapr>5 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>0.00</td>
+  <td class=red>-4,059.01</td>
+  <td class=red>-4,059.01</td>
+  <td class=nowrapr>154 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=Food></a>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>Eating Out</td>
+  <td class=green>2.21</td>
+  <td class=red>-11,155.44</td>
+  <td class=red>-11,153.23</td>
+  <td class=nowrapr>679 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>Grocery Store</td>
+  <td class=green>2.13</td>
+  <td class=red>-10,623.74</td>
+  <td class=red>-10,621.61</td>
+  <td class=nowrapr>306 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>4.34</td>
+  <td class=red>-21,779.18</td>
+  <td class=red>-21,774.84</td>
+  <td class=nowrapr>985 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=GovernmentTaxes></a>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>Federal</td>
+  <td class=green>14,588.15</td>
+  <td class=red>-9,121.00</td>
+  <td class=green>5,467.15</td>
+  <td class=nowrapr>5 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>Local</td>
+  <td class=green>0.00</td>
+  <td class=red>-159.96</td>
+  <td class=red>-159.96</td>
+  <td class=nowrapr>3 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>State</td>
+  <td class=green>10,677.64</td>
+  <td class=red>-6,425.94</td>
+  <td class=green>4,251.70</td>
+  <td class=nowrapr>13 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>TurboTax</td>
+  <td class=green>0.00</td>
+  <td class=red>-254.15</td>
+  <td class=red>-254.15</td>
+  <td class=nowrapr>20 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>25,265.79</td>
+  <td class=red>-15,961.05</td>
+  <td class=green>9,304.74</td>
+  <td class=nowrapr>41 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=HouseExpenseCO></a>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>House Insurance</td>
+  <td class=green>0.00</td>
+  <td class=red>-927.88</td>
+  <td class=red>-927.88</td>
+  <td class=nowrapr>4 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>House Maintenance</td>
+  <td class=green>43.00</td>
+  <td class=red>-4,492.97</td>
+  <td class=red>-4,449.97</td>
+  <td class=nowrapr>20 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>Mortgage/Property Tax/Insurance</td>
+  <td class=green>0.00</td>
+  <td class=red>-82,479.22</td>
+  <td class=red>-82,479.22</td>
+  <td class=nowrapr>56 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>Utilities</td>
+  <td class=green>0.00</td>
+  <td class=red>-20,347.70</td>
+  <td class=red>-20,347.70</td>
+  <td class=nowrapr>323 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>43.00</td>
+  <td class=red>-108,247.77</td>
+  <td class=red>-108,204.77</td>
+  <td class=nowrapr>403 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=HouseExpenseMA></a>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>House Insurance</td>
+  <td class=green>0.00</td>
+  <td class=red>-7,284.00</td>
+  <td class=red>-7,284.00</td>
+  <td class=nowrapr>8 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>House Maintenance</td>
+  <td class=green>0.00</td>
+  <td class=red>-24,505.54</td>
+  <td class=red>-24,505.54</td>
+  <td class=nowrapr>79 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>Property Tax</td>
+  <td class=green>0.00</td>
+  <td class=red>-7,423.84</td>
+  <td class=red>-7,423.84</td>
+  <td class=nowrapr>28 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>Utilities</td>
+  <td class=green>0.00</td>
+  <td class=red>-12,330.79</td>
+  <td class=red>-12,330.79</td>
+  <td class=nowrapr>210 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>0.00</td>
+  <td class=red>-51,544.17</td>
+  <td class=red>-51,544.17</td>
+  <td class=nowrapr>325 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=Income></a>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Income</td>
+  <td class=nowrapl>ITT Benefits</td>
+  <td class=green>283,206.46</td>
+  <td class=green>0.00</td>
+  <td class=green>283,206.46</td>
+  <td class=nowrapr>72 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Income</td>
+  <td class=nowrapl>Salary</td>
+  <td class=green>20,175.96</td>
+  <td class=green>0.00</td>
+  <td class=green>20,175.96</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Income</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>303,382.42</td>
+  <td class=green>0.00</td>
+  <td class=green>303,382.42</td>
+  <td class=nowrapr>78 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=MedicalDental></a>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Dentist</td>
+  <td class=green>0.00</td>
+  <td class=red>-5,635.00</td>
+  <td class=red>-5,635.00</td>
+  <td class=nowrapr>14 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Dermatology</td>
+  <td class=green>0.00</td>
+  <td class=red>-127.87</td>
+  <td class=red>-127.87</td>
+  <td class=nowrapr>2 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Eye</td>
+  <td class=green>0.00</td>
+  <td class=red>-401.98</td>
+  <td class=red>-401.98</td>
+  <td class=nowrapr>2 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Insurance</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,476.51</td>
+  <td class=red>-1,476.51</td>
+  <td class=nowrapr>32 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Lab</td>
+  <td class=green>0.00</td>
+  <td class=red>-267.51</td>
+  <td class=red>-267.51</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Medical Office</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,818.81</td>
+  <td class=red>-1,818.81</td>
+  <td class=nowrapr>17 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>Pharmacy</td>
+  <td class=green>0.00</td>
+  <td class=red>-758.87</td>
+  <td class=red>-758.87</td>
+  <td class=nowrapr>13 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>0.00</td>
+  <td class=red>-10,486.55</td>
+  <td class=red>-10,486.55</td>
+  <td class=nowrapr>86 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=OtherPurchase></a>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Book Store</td>
+  <td class=green>8.07</td>
+  <td class=red>-568.84</td>
+  <td class=red>-560.77</td>
+  <td class=nowrapr>11 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Cloud Purchase</td>
+  <td class=green>0.00</td>
+  <td class=red>-4,237.23</td>
+  <td class=red>-4,237.23</td>
+  <td class=nowrapr>50 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Computer/Electronics</td>
+  <td class=green>86.39</td>
+  <td class=red>-3,496.66</td>
+  <td class=red>-3,410.27</td>
+  <td class=nowrapr>28 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Department Store</td>
+  <td class=green>289.34</td>
+  <td class=red>-13,568.44</td>
+  <td class=red>-13,279.10</td>
+  <td class=nowrapr>208 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Drug Store</td>
+  <td class=green>0.00</td>
+  <td class=red>-626.11</td>
+  <td class=red>-626.11</td>
+  <td class=nowrapr>40 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Family and Friends</td>
+  <td class=green>0.00</td>
+  <td class=red>-14,005.00</td>
+  <td class=red>-14,005.00</td>
+  <td class=nowrapr>25 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Fedex</td>
+  <td class=green>0.00</td>
+  <td class=red>-98.79</td>
+  <td class=red>-98.79</td>
+  <td class=nowrapr>7 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Gift Shop</td>
+  <td class=green>164.00</td>
+  <td class=red>-3,302.68</td>
+  <td class=red>-3,138.68</td>
+  <td class=nowrapr>59 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Haircut/Cosmetic</td>
+  <td class=green>0.00</td>
+  <td class=red>-129.21</td>
+  <td class=red>-129.21</td>
+  <td class=nowrapr>2 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Hardware Store</td>
+  <td class=green>64.56</td>
+  <td class=red>-1,189.40</td>
+  <td class=red>-1,124.84</td>
+  <td class=nowrapr>21 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Immigration Expense</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,550.00</td>
+  <td class=red>-1,550.00</td>
+  <td class=nowrapr>3 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Kitchen Store</td>
+  <td class=green>0.00</td>
+  <td class=red>-105.63</td>
+  <td class=red>-105.63</td>
+  <td class=nowrapr>3 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Lawyer</td>
+  <td class=green>0.00</td>
+  <td class=red>-4,465.63</td>
+  <td class=red>-4,465.63</td>
+  <td class=nowrapr>7 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Misc</td>
+  <td class=green>0.00</td>
+  <td class=red>-19,916.00</td>
+  <td class=red>-19,916.00</td>
+  <td class=nowrapr>14 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Post Office</td>
+  <td class=green>0.00</td>
+  <td class=red>-969.98</td>
+  <td class=red>-969.98</td>
+  <td class=nowrapr>32 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>Stationary Store</td>
+  <td class=green>12.72</td>
+  <td class=red>-386.60</td>
+  <td class=red>-373.88</td>
+  <td class=nowrapr>16 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>625.08</td>
+  <td class=red>-68,616.20</td>
+  <td class=red>-67,991.12</td>
+  <td class=nowrapr>526 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=School></a>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>School</td>
+  <td class=nowrapl>Books</td>
+  <td class=green>0.00</td>
+  <td class=red>-386.09</td>
+  <td class=red>-386.09</td>
+  <td class=nowrapr>8 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>School</td>
+  <td class=nowrapl>Tuition</td>
+  <td class=green>0.00</td>
+  <td class=red>-3,873.19</td>
+  <td class=red>-3,873.19</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>School</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>0.00</td>
+  <td class=red>-4,259.28</td>
+  <td class=red>-4,259.28</td>
+  <td class=nowrapr>14 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=Travel></a>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>Airplane</td>
+  <td class=green>0.00</td>
+  <td class=red>-16,814.69</td>
+  <td class=red>-16,814.69</td>
+  <td class=nowrapr>43 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>Hotel</td>
+  <td class=green>0.00</td>
+  <td class=red>-8,138.91</td>
+  <td class=red>-8,138.91</td>
+  <td class=nowrapr>85 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>Rental Car</td>
+  <td class=green>322.00</td>
+  <td class=red>-1,449.71</td>
+  <td class=red>-1,127.71</td>
+  <td class=nowrapr>11 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>Train/Bus/Taxi</td>
+  <td class=green>1.85</td>
+  <td class=red>-2,577.49</td>
+  <td class=red>-2,575.64</td>
+  <td class=nowrapr>56 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>323.85</td>
+  <td class=red>-28,980.80</td>
+  <td class=red>-28,656.95</td>
+  <td class=nowrapr>195 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Subcategory</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">Transactions</th>
+</tr>
+<a name=UNKNOWN_CATEGORY></a>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>UNKNOWN_CATEGORY</td>
+  <td class=nowrapl>UNKNOWN_SUBCATEGORY</td>
+  <td class=green>0.00</td>
+  <td class=red>-755.40</td>
+  <td class=red>-755.40</td>
+  <td class=nowrapr>10 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>UNKNOWN_CATEGORY</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>0.00</td>
+  <td class=red>-755.40</td>
+  <td class=red>-755.40</td>
+  <td class=nowrapr>10 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl></td>
+  <td class=nowrapl>Total</td>
+  <td class=green>349,934.81</td>
+  <td class=red>-538,920.58</td>
+  <td class=red>-188,985.77</td>
+  <td class=nowrapr>4579 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+</table>
+</body></html>

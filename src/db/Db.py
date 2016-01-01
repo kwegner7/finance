@@ -830,12 +830,14 @@ class SetOfFiles(Reference):
         if not practicing and (final_number_flat_files > original_number_flat_files):
             Scripts.timeStampFile(flat_folder)
         print
-        print "  {0:>6d} pictures originally in the destination folder".format(original_number_flat_files)
-        print "  {0:>6d} pictures imported into the destination folder".format(count_files_added)
-        print "  {0:>6d} pictures renamed due to duplicate name".format(count_duplicate_name)
-        print "  {0:>6d} pictures finally in the destination folder".format(final_number_flat_files)
+        print "  {0:>6d} pictures originally in the destination flat folder".format(original_number_flat_files)
+        print "  {0:>6d} pictures imported into the destination flat folder".format(count_files_added)
+        print "  {0:>6d} pictures imported but renamed due to duplicate name".format(count_duplicate_name)
+        print "  {0:>6d} pictures finally in the destination flat folder".format(final_number_flat_files)
+        print
+        print "  {0:>6d} pictures in the source tree trying to import".format(count_tree_files)
         print "  {0:>6d} pictures existed already in the destination folder".format(count_exists_already)
-        print "  {0:>6d} pictures to be imported".format(count_tree_files)
+        print "  {0:>6d} pictures imported into the destination flat folder".format(count_files_added)
         print
         return
 

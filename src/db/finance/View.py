@@ -177,8 +177,7 @@ class ViewFinance(View):
     def htmlPresentation(self, dirpath):
         HtmlModern(self, dirpath)
         return
-        
-        
+                
 #===============================================================================
 # Month/Year
 #===============================================================================

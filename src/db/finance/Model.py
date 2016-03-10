@@ -53,7 +53,7 @@ class ModelFinance(Model):
     def __init__(self, obj):
         #self.checkClass(obj, ModelFinance, EssenceFinance)
         self.accounts = Db_Accounts(
-            '/home/kurt/checked-out/apps/finance/svn-run/in/All/Accounts_All.csv')
+            '/home/orig/proj/git/finance/run/in/BeyondBanking/Accounts_All.csv')
         Model.__init__(self, obj)
 
     # implementations of abstract methods     

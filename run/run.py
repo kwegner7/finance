@@ -61,7 +61,7 @@ if __name__ == '__main__':
         #===========================================================================
         if True:
             import os
-            latest_bb_downloads = "/home/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2015-10-11"        
+            latest_bb_downloads = "/home/orig/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2015-10-11"        
             first_time = True        
             for directory, subdirectories, files in os.walk(latest_bb_downloads):
                 for file in files:
@@ -103,13 +103,13 @@ if __name__ == '__main__':
             combine.append(essence)
       
             print "\n    obtaining Mint Capital One Credit Card"
-            csv = '/home/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
+            csv = '/home/orig/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
             orig    = OrigMint(csv, Db.CsvFormatStandard)   
             essence  = EssenceMint(orig, 'Mint Capital One')          
             combine.append(essence)
             
             print "\n    obtaining Mint Chase Credit Card"
-            csv = '/home/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
+            csv = '/home/orig/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
             orig    = OrigMint(csv, Db.CsvFormatStandard)   
             essence = EssenceMint(orig, 'Mint Chase')                  
             combine.append(essence)
@@ -121,8 +121,8 @@ if __name__ == '__main__':
         else:
             csv1 = os.getcwd()+'/in/BeyondBanking/2010-09-30to2013-10-10.csv'
             csv2 = os.getcwd()+'/in/BeyondBanking/LATEST_ML_SORTED.csv'
-            csv3 = '/home/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
-            csv4 = '/home/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
+            csv3 = '/home/orig/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
+            csv4 = '/home/orig/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
             model = BuildModel( list([
                 EssenceFinance(OrigFinance(csv1)),
                 EssenceFinance(OrigFinance(csv2)),
@@ -186,11 +186,11 @@ if __name__ == '__main__':
             orig = Finance.OrigEssence(csv)   
             essence.append(Finance.Essence(orig)) 
             
-            csv = '/home/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
+            csv = '/home/orig/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
             orig = Finance.OrigMint(csv, Db.CsvFormatStandard)   
             essence.append(Finance.Essence(orig)) 
                      
-            csv = '/home/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
+            csv = '/home/orig/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
             orig = Finance.OrigMint(csv, Db.CsvFormatStandard)   
             essence.append(Finance.Essence(orig)) 
 
@@ -213,9 +213,9 @@ if False:
     from db.Db import SetOfFiles
  
     print "MAKE A LIST OF THE MASTER TREE FILES"
-    os.system("/home/kurt/Documents/tools/jpg-import.bsh /test/MASTER/ /proj/jpg/in/MASTER.csv" )
+    os.system("/home/orig/kurt/Documents/tools/jpg-import.bsh /test/MASTER/ /proj/jpg/in/MASTER.csv" )
     print "MAKE A LIST OF THE IMPORT TREE FILES"
-    os.system("/home/kurt/Documents/tools/jpg-import.bsh /test/IMPORT/ /proj/jpg/in/IMPORT.csv" )
+    os.system("/home/orig/kurt/Documents/tools/jpg-import.bsh /test/IMPORT/ /proj/jpg/in/IMPORT.csv" )
     print "MAKE A REFERENCE TO THE CSV MASTER LIST OF FILES"
     print "AND CREATE INTERNAL HASH TABLE SET OF CHECKSUMS"
     master = SetOfFiles('/proj/jpg/in/MASTER.csv')
@@ -230,7 +230,7 @@ if False:
     html   = view.pages(os.getcwd()+'/out/html/jpg-diff')
     
     
-    
-print "\nCHECKING ..."            
-os.system("bash --rcfile ~/.bashrc -c /home/kurt/Documents/tools/check.bsh")   
+if False:    
+    print "\nCHECKING ..."            
+    os.system("bash --rcfile ~/.bashrc -c /home/orig/kurt/Documents/tools/check.bsh")   
 exit()

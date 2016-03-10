@@ -71,6 +71,7 @@ class ViewCategory(View.ViewCategory): pass
 class ViewCategorySummary(View.ViewCategorySummary): pass
 class ViewSubCategory(View.ViewSubCategory): pass
 class ViewSubCategorySummary(View.ViewSubCategorySummary): pass
+class ViewAccountsSummary(View.ViewAccountsSummary): pass
 
 #===============================================================================
 # Conversion from Essence to the Model
@@ -105,6 +106,9 @@ class Model(Db.Model):
             and not ignore_partial_first_month     
         )
         return True
+
+    def isSelectedRow(self, row):
+        return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 
     def sortBeforeTransform(self): 
         return list([ 'Date', 'Amount' ])

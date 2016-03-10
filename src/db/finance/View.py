@@ -136,10 +136,8 @@ class ViewFinance(View):
         self.total_category = Db.Total(['Category'])
         return
 
-    def isSelectedRow(self, row):
-        return True
-        return row["Category"] != "UNKNOWN_CATEGORY"
-        return True
+    def isSelectedRow(self, row): 
+        return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 
     def transform(self, this_row, next_row):
         row_out = dict(this_row)
@@ -154,22 +152,45 @@ class ViewFinance(View):
         row_out['CountSection'] = self.count_section.accumulate(this_row)
         row_out['CountSubsection'] = self.count_subsection.accumulate(this_row)
 
-        row_out['TotalRunning'] = self.total_running.accumulate(this_row)
-        row_out['DebitRunning'] = self.debit_running.accumulate(this_row)
+        if (not     (this_row["Category"] == "Credit Card" and this_row["Subcategory"] == "Pay Credit Card" and  this_row["Account"] == "Capital One")      
+            and not (this_row["Category"] == "Credit Card" and this_row["Subcategory"] == "Pay Credit Card" and  this_row["Account"] == "Chase") ):    
 
-        row_out['TotalSection'] = self.total_section.accumulate(this_row)
-        row_out['DebitSection'] = self.debit_section.accumulate(this_row)
+            row_out['TotalRunning'] = self.total_running.accumulate(this_row)
+            row_out['DebitRunning'] = self.debit_running.accumulate(this_row)
 
-        row_out['TotalSubsection'] = self.total_subsection.accumulate(this_row)
-        row_out['DebitSubsection'] = self.debit_subsection.accumulate(this_row)
+            row_out['TotalSection'] = self.total_section.accumulate(this_row)
+            row_out['DebitSection'] = self.debit_section.accumulate(this_row)
 
-        row_out['TotalMonth'] = self.total_month.accumulate(this_row)
-        row_out['DebitMonth'] = self.debit_month.accumulate(this_row)
+            row_out['TotalSubsection'] = self.total_subsection.accumulate(this_row)
+            row_out['DebitSubsection'] = self.debit_subsection.accumulate(this_row)
 
-        row_out['TotalYear'] = self.total_year.accumulate(this_row)
-        row_out['DebitYear'] = self.debit_year.accumulate(this_row)
+            row_out['TotalMonth'] = self.total_month.accumulate(this_row)
+            row_out['DebitMonth'] = self.debit_month.accumulate(this_row)
 
-        row_out['TotalCategory'] = self.total_category.accumulate(this_row)
+            row_out['TotalYear'] = self.total_year.accumulate(this_row)
+            row_out['DebitYear'] = self.debit_year.accumulate(this_row)
+
+            row_out['TotalCategory'] = self.total_category.accumulate(this_row)
+
+        else:
+
+            print "Skipping", this_row["Category"], this_row["Subcategory"], this_row["Account"], this_row["Date"], this_row["Amount"]
+            row_out['TotalRunning'] = self.total_running.get()
+            row_out['DebitRunning'] = self.debit_running.get()
+
+            row_out['TotalSection'] = self.total_section.get()
+            row_out['DebitSection'] = self.debit_section.get()
+
+            row_out['TotalSubsection'] = self.total_subsection.get()
+            row_out['DebitSubsection'] = self.debit_subsection.get()
+
+            row_out['TotalMonth'] = self.total_month.get()
+            row_out['DebitMonth'] = self.debit_month.get()
+
+            row_out['TotalYear'] = self.total_year.get()
+            row_out['DebitYear'] = self.debit_year.get()
+
+            row_out['TotalCategory'] = self.total_category.get()
 
         please_write = self.collapse.accumulate(this_row)
         return please_write, row_out
@@ -194,7 +215,7 @@ class ViewMonth(ViewFinance):
         return list([ 'Year', ])
 
     def htmlPresentation(self, dirpath):
-        HtmlModern(self, dirpath)
+        HtmlMonthDetails(self, dirpath)
         return
                 
 __all__ += ["ViewMonthSummary"]
@@ -203,8 +224,33 @@ class ViewMonthSummary(ViewMonth):
     def htmlPresentation(self, dirpath):
         HtmlMonthSummary(self, dirpath)
         return
+           
+#===============================================================================
+# Accounts
+#===============================================================================
+__all__ += ["ViewAccounts"]
+class ViewAccounts(ViewFinance):
+
+    def sortBeforeTransform(self): 
+        return list([ 'Year', 'Account', 'Date' ])
         
+    def subsectionChange(self):
+        return list([  'Year', 'Account', ])
+
+    def sectionChange(self):
+        return list([  'Year', ])
+
+    def htmlPresentation(self, dirpath):
+        HtmlAccountsDetails(self, dirpath)
+        return
+                
+__all__ += ["ViewAccountsSummary"]
+class ViewAccountsSummary(ViewAccounts):
         
+    def htmlPresentation(self, dirpath):
+        HtmlAccountsSummary(self, dirpath)
+        return
+         
 #===============================================================================
 # Category
 #===============================================================================
@@ -212,21 +258,25 @@ __all__ += ["ViewCategory"]
 class ViewCategory(ViewFinance):
 
     def sortBeforeTransform(self): 
-        return list([ 'Year', 'Category', 'Subcategory', 'Date' ])
+        return list([ 'Year', 'Category', 'Date' ])
         
     def subsectionChange(self):
-        return list([ 'Year', 'Category',  ])
+        return list([ 'Year', 'Category', ])
 
     def sectionChange(self):
         return list([ 'Year', ])
+
+    def htmlPresentation(self, dirpath):
+        HtmlCategoryDetails(self, dirpath)
+        return
                 
 __all__ += ["ViewCategorySummary"]
 class ViewCategorySummary(ViewCategory):
         
     def htmlPresentation(self, dirpath):
-        HtmlModernSummary(self, dirpath)
+        HtmlCategorySummary(self, dirpath)
         return
-        
+       
 #===============================================================================
 # Subcategory
 #===============================================================================
@@ -234,19 +284,23 @@ __all__ += ["ViewSubCategory"]
 class ViewSubCategory(ViewFinance):
 
     def sortBeforeTransform(self): 
-        return list([ 'Category', 'Subcategory', 'Date' ])
+        return list([ 'Year', 'Category', 'Subcategory', 'Date' ])
         
     def subsectionChange(self):
-        return list([ 'Category', 'Subcategory', ])
+        return list([ 'Year', 'Category', 'Subcategory', ])
 
     def sectionChange(self):
-        return list([ 'Category', ])
+        return list([ 'Year', 'Category', ])
+
+    def htmlPresentation(self, dirpath):
+        HtmlSubCategoryDetails(self, dirpath)
+        return
                 
 __all__ += ["ViewSubCategorySummary"]
 class ViewSubCategorySummary(ViewSubCategory):
         
     def htmlPresentation(self, dirpath):
-        HtmlModernSummary(self, dirpath)
+        HtmlSubCategorySummary(self, dirpath)
         return
         
 #===============================================================================
@@ -278,7 +332,7 @@ class ViewYearSummary(ViewFinance):
 
 
 
-
+'''
 
 __all__ += ["ViewFinanceNew"]
 class ViewFinanceNew(ViewFinance):
@@ -344,8 +398,8 @@ class ViewMonths(ViewFinance):
 #    for section category and subsection year.
 #
 #===============================================================================
-__all__ += ["ViewCategory"]
-class ViewCategory(ViewFinance):
+
+class ViewCategoryy(ViewFinance):
     
     # reimplementations of abstract methods     
     def sortBeforeTransform(self): return list([ 
@@ -596,4 +650,4 @@ class ViewCheckMint(View):
         HtmlCheckMint(self, dirpath)
         return
 
-                              
+'''                              

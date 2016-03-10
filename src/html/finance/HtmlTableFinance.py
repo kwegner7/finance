@@ -17,13 +17,16 @@ __all__ = \
 [
     "UsualDefaults",
     "HtmlModern",
-    "HtmlModernNew",
-    "HtmlModernAccounts",
+
+]
+'''
     "HtmlModernCategory",
     "HtmlModernSubcategory",
     "HtmlModernSummary",
     "HtmlMonthSummary",
     "HtmlCategorySummary",
+    "HtmlModernAccounts",
+    "HtmlModernNew",
     "HtmlSubcategorySummary",
     "HtmlAccountSummary",
     "HtmlGeneric",
@@ -39,6 +42,7 @@ __all__ = \
     "Html_NaturalSubcategoryYear",
     "Html_NaturalAccountYear",
 ]
+'''
 #===============================================================================
 # HtmlModern 
 #===============================================================================
@@ -65,7 +69,7 @@ class HtmlModern(UsualDefaults):
     def tableHeadings(self):
         return Base.tableHeadings(self)
 
-    def columns(self):
+    def columnss(self):
         nature_of_columns = ([
         self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
         self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
@@ -113,20 +117,11 @@ class HtmlModernSummary(HtmlModern):
 
     def summaryOnly(self):
         return True
-
-    def columns(self):
-        nature_of_columns = list()
-        if True:
-            nature_of_columns.append(self.cfg('Category'     , self.sectionTitle()    , 0, 'nowrapl', '1.0' ))
-        if True:
-            nature_of_columns.append(self.cfg('Subcategory'  , self.subsectionTitle() , 0, 'nowrapl', '1.0' ))
-            nature_of_columns.append(self.cfg('Amount'       , 'Credit'              , 0,   'funds', '1.0' ))
-            nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'               , 0,   'funds', '1.0' ))
-            nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'             , 0,   'funds', '1.0' ))
-            nature_of_columns.append(self.cfg('CountRunning' , 'Transactions'        , 0, 'nowrapr', '1.0' ))
-        return nature_of_columns
         
     # Aug 2014     4,913.70     -10,518.45     -5,604.75     193 transactions
+    # NOTE:
+    #     'Category' is set to the rightmost field of sectionChange
+    #     'Subsection' is set to the rightmost field of subsectionChange
     def summaryFollowingSubsection(self, bottom_row_prev_section, is_final_row=False):
         color = self.background_color
         cols = self.orderedHtmlColumns()
@@ -244,15 +239,142 @@ class HtmlModernSummary(HtmlModern):
         self.first_row_of_section = False
         return None
 
-__all__ +=  ['HtmlModernSummary']      
+
+
+__all__ +=  ['HtmlMonthDetails']      
+class HtmlMonthDetails(HtmlModern):
+
+    def __init__(self, db, folder_html):
+        HtmlModern.__init__(self, db, folder_html)
+
+    def columns(self):
+        nature_of_columns = ([
+        self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
+        self.cfg('Amount'             , 'Amount'                  ,   0,   'funds', '1.0' ),
+        self.cfg('Account'            , 'Account Name'            ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Category'           , 'Category'                ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Subcategory'        , 'Subcategory'             ,   0, 'nowrapl', '1.0' ),        
+        ])
+        return nature_of_columns
+
+
+__all__ +=  ['HtmlMonthSummary']      
 class HtmlMonthSummary(HtmlModernSummary):
 
     def __init__(self, db, folder_html):
         HtmlModernSummary.__init__(self, db, folder_html)
 
-    def sectionTitle(self): return 'Year'
-    def subsectionTitle(self): return 'Month'
+    def columns(self):
+        nature_of_columns = list()
+        nature_of_columns.append(self.cfg('Category'     , 'Year'         , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Subcategory'  , 'Month'        , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
+        return nature_of_columns
 
+
+__all__ +=  ['HtmlAccountsDetails']      
+class HtmlAccountsDetails(HtmlModern):
+
+    def __init__(self, db, folder_html):
+        HtmlModern.__init__(self, db, folder_html)
+
+    def columns(self):
+        nature_of_columns = ([
+        self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
+        self.cfg('Amount'             , 'Amount'                  ,   0,   'funds', '1.0' ),
+        self.cfg('Account'            , 'Account Name'            ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Category'           , 'Category'                ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Subcategory'        , 'Subcategory'             ,   0, 'nowrapl', '1.0' ),        
+        ])
+        return nature_of_columns
+
+__all__ +=  ['HtmlAccountsSummary']      
+class HtmlAccountsSummary(HtmlModernSummary):
+
+    def __init__(self, db, folder_html):
+        HtmlModernSummary.__init__(self, db, folder_html)
+
+    def columns(self):
+        nature_of_columns = list()
+        nature_of_columns.append(self.cfg('Category'     , 'Year'         , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Subcategory'  , 'Account'     , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
+        return nature_of_columns
+
+
+
+__all__ +=  ['HtmlCategoryDetails']      
+class HtmlCategoryDetails(HtmlModern):
+
+    def __init__(self, db, folder_html):
+        HtmlModern.__init__(self, db, folder_html)
+
+    def columns(self):
+        nature_of_columns = ([
+        self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
+        self.cfg('Amount'             , 'Amount'                  ,   0,   'funds', '1.0' ),
+        self.cfg('Account'            , 'Account Name'            ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Category'           , 'Category'                ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Subcategory'        , 'Subcategory'             ,   0, 'nowrapl', '1.0' ),        
+        ])
+        return nature_of_columns
+
+    def columnss(self):
+        nature_of_columns = ([
+        self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
+        self.cfg('Amount'             , 'Amount'                  ,   0,   'funds', '1.0' ),
+        self.cfg('Account'            , 'Account Name'            ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Category'           , 'Category'                ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Subcategory'        , 'Subcategory'             ,   0, 'nowrapl', '1.0' ),        
+        self.cfg('TransferMech1'      , 'Trans1'                  ,   0,  'whitel', '1.0' ),
+        self.cfg('TransferMech2'      , 'Trans2'                  ,   0,  'whitel', '1.0' ),
+        self.cfg('AccountAlias'       , 'Transaction Details'     ,   0,  'whitel', '1.0' ),
+        ])
+        return nature_of_columns
+
+
+__all__ +=  ['HtmlCategorySummary']      
+class HtmlCategorySummary(HtmlModernSummary):
+
+    def __init__(self, db, folder_html):
+        HtmlModernSummary.__init__(self, db, folder_html)
+
+    def columns(self):
+        nature_of_columns = list()
+        nature_of_columns.append(self.cfg('Category'     , 'Year'         , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Subcategory'  , 'Category'     , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
+        return nature_of_columns
+
+
+__all__ +=  ['HtmlSubCategorySummary']      
+class HtmlSubCategorySummary(HtmlModernSummary):
+
+    def __init__(self, db, folder_html):
+        HtmlModernSummary.__init__(self, db, folder_html)
+
+    def columns(self):
+        nature_of_columns = list()
+        nature_of_columns.append(self.cfg('Category'     , 'Category'     , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Subcategory'  , 'Subcategory'  , 0, 'nowrapl', '1.0' ))
+        nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
+        return nature_of_columns
 
        
 ################################################################################
@@ -289,7 +411,7 @@ stuff[cols[3]] = avePerMonth(
 stuff[cols[4]] = '&nbsp;'
 #self.insertOneSummaryRecord(stuff, color, 'normal')              
 return
-'''
+
 
 class HtmlModernNew(UsualDefaults):
 
@@ -480,7 +602,7 @@ class HtmlYearSummary(HtmlModernSummary):
     def summaryFollowingSection(self, bottom_row_prev_section, is_final_row=False): return
 
 #2B
-class HtmlCategorySummary(HtmlModernSummary):
+class HtmlCategorySummaryy(HtmlModernSummary):
 
     def __init__(self, db, folder_html=None):
         HtmlModernSummary.__init__(self, db, folder_html)
@@ -1325,4 +1447,5 @@ class Html_Category(Html_Finance_Default):
         self.summaryFollowingSubsection0(bottom_row_prev_section)
         if is_last_row:
             self.grandTotals(bottom_row_prev_section)
+'''
 

@@ -846,16 +846,19 @@ Beyond Banking`2015-12-01`-57.87`Other`Pre Authdebit`INTERMOUNTAIN RU
 Beyond Banking`2015-12-01`-80.89`Other`Pre Authdebit`TDS
 Beyond Banking`2015-12-03`-26.61`Other`Pre Authdebit`AMERICAN HERITAG
 Beyond Banking`2015-12-07`-10,000.00`FundTransfers`Funds Transfer`TR TO ML   22D17287
+Beyond Banking`2015-12-07`10,000.00`FundTransfers`Funds Transfer`TR FROM ML 22D12454
 Beyond Banking`2015-12-07`-25.00`Other`Pre Authdebit`CAMPUS CRUSADE F
 Beyond Banking`2015-12-07`-48.19`Other`Pre Authdebit`CITY OF WOODLAND
 Beyond Banking`2015-12-07`-6,395.27`Other`Pre Authdebit`CAPITAL ONE
 Beyond Banking`2015-12-08`-136.28`Other`Pre Authdebit`Waste Management
+Beyond Banking`2015-12-09`-4,000.00`FundTransfers`Funds Transfer`TR TO ML   22D12454
 Beyond Banking`2015-12-09`4,000.00`FundTransfers`Funds Transfer`TR FROM ML 22D17287
 Beyond Banking`2015-12-11`-125.68`Other`Pre Authdebit`FARMERS INS
 Beyond Banking`2015-12-11`-25.00`BillPay`Bill Payment`EFCA            00880922
 Beyond Banking`2015-12-11`-25.00`BillPay`Bill Payment`OC INTERNATIONAL00880924
 Beyond Banking`2015-12-11`-47.00`Other`Pre Authdebit`ARBELLA MUTUAL
 Beyond Banking`2015-12-11`-76.71`Other`Pre Authdebit`VERIZON WIRELESS
+Beyond Banking`2015-12-14`-146.01`ATM`Cash Machine`ATM 404650 BOGOR              12/14 2,000,000.00 IDR Or $143.15 + $2.86 Int.Trn.Fee
 Beyond Banking`2015-12-15`-120.00`BillPay`Bill Payment`WOODLAND PARK CO00880916
 Beyond Banking`2015-12-15`-25.00`BillPay`Bill Payment`SALVATION ARMY  00880920
 Beyond Banking`2015-12-15`-50.00`BillPay`Bill Payment`MISSION TO THE W00880921
@@ -863,34 +866,47 @@ Beyond Banking`2015-12-15`-50.00`Other`Pre Authdebit`AFRICA INLAND MI
 Beyond Banking`2015-12-16`-49.77`Other`Pre Authdebit`NATIONAL GRID NE
 Beyond Banking`2015-12-18`-50.00`BillPay`Bill Payment`VIETNAMESE EVANG00880926
 Beyond Banking`2015-12-18`-69.79`Other`Pre Authdebit`COMCAST
+Beyond Banking`2015-12-21`-145.95`ATM`Cash Machine`ATM 460815 MATTOANGIN         12/20 2,000,000.00 IDR Or $143.09 + $2.86 Int.Trn.Fee
 Beyond Banking`2015-12-21`-1.50`Other`Pre Authdebit`BANK OF AMERICA
 Beyond Banking`2015-12-21`-25.00`BillPay`Bill Payment`JEMS            00880927
 Beyond Banking`2015-12-21`-35.00`Other`Pre Authdebit`World Vision
 Beyond Banking`2015-12-21`-96.66`Other`Pre Authdebit`CHASE
 Beyond Banking`2015-12-22`-100.00`BillPay`Bill Payment`LION OF JUDAH MI00880918
+Beyond Banking`2015-12-22`-147.73`ATM`Cash Machine`ATM 482686 MATTOANGIN         12/22 2,000,000.00 IDR Or $144.83 + $2.90 Int.Trn.Fee
+Beyond Banking`2015-12-22`-147.73`ATM`Cash Machine`ATM 482692 MATTOANGIN         12/22 2,000,000.00 IDR Or $144.83 + $2.90 Int.Trn.Fee
 Beyond Banking`2015-12-22`-25.00`BillPay`Bill Payment`HARVEST FAMILY C00880919
 Beyond Banking`2015-12-22`-25.00`BillPay`Bill Payment`THE LION OF JUDA00880917
+Beyond Banking`2015-12-23`-290.00`BillPay`Bill Payment`JOHN VIOLA      00880101
 Beyond Banking`2015-12-24`-25.00`BillPay`Bill Payment`SFVHC BUILDING F00880923
+Beyond Banking`2015-12-28`-224.67`ATM`Cash Machine`ATM 081875 BOGOR              12/28 3,000,000.00 IDR Or $220.26 + $4.41 Int.Trn.Fee
+Beyond Banking`2015-12-28`-224.67`ATM`Cash Machine`ATM 111227 BOGOR              12/28 3,000,000.00 IDR Or $220.26 + $4.41 Int.Trn.Fee
 Beyond Banking`2015-12-28`-25.00`Other`Pre Authdebit`World Gospel Mis
 Beyond Banking`2015-12-29`-124.53`Other`Pre Authdebit`BLACK HILLS UTLH
 Beyond Banking`2015-12-29`-43.25`Other`Pre Authdebit`EVERSOURCE
 Beyond Banking`2015-12-29`-50.00`BillPay`Bill Payment`YEKOPE MINISTRIE00880925
 Beyond Banking`2015-12-30`-68.07`Other`Pre Authdebit`INTERMOUNTAIN RU
+Beyond Banking`2015-12-31`0.04`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 12/09 THRU 12/31
 Beyond Banking`2015-12-31`0.07`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 11/30 THRU 12/31
 Beyond Banking`2015-12-31`-12.20`Other`Acum For Mo Ck`TRANS ASSET ALL GRW A ACCUM FOR MONTHLY CK
 Beyond Banking`2015-12-31`12.20`DividendAndInterest`Dividend`TRANS ASSET ALL GRW A PAY DATE 12/30/2015
+Beyond Banking`2015-12-31`-222.26`ATM`Cash Machine`ATM 984567 BOGOR              12/31 3,000,000.00 IDR Or $217.90 + $4.36 Int.Trn.Fee
 Beyond Banking`2015-12-31`4,894.92`FundReceipts`DDS`BENEFIT PAYMENTS
+Beyond Banking`2015-12-31`-550.88`BillPay`Bill Payment`PHH MORTGAGE
 Beyond Banking`2015-12-31`-59.18`Other`Acum For Mo Ck`TRANS ASSET ALL GRW A ACCUM FOR MONTHLY CK
 Beyond Banking`2015-12-31`59.18`DividendAndInterest`Lg Tm Cap Gain`TRANS ASSET ALL GRW A PAY DATE 12/30/2015
 Beyond Banking`2015-12-31`-71.38`Other`Check`MONTHLY AMT ISSUED
 Beyond Banking`2015-12-31`71.38`Other`Total Mo Accum`TOTAL DIV/INT PAYMENTS
+Beyond Banking`2016-01-04`-222.05`ATM`Cash Machine`ATM 944227 BOGOR              01/04 3,000,000.00 IDR Or $217.70 + $4.35 Int.Trn.Fee
 Beyond Banking`2016-01-04`-50.00`Other`Pre Authdebit`WOODLAND PARK CO
 Beyond Banking`2016-01-04`-80.89`Other`Pre Authdebit`TDS
+Beyond Banking`2016-01-05`-183.65`ATM`Cash Machine`ATM 015416 JKT                01/05 2,500,000.00 IDR Or $180.05 + $3.60 Int.Trn.Fee
 Beyond Banking`2016-01-05`-25.00`Other`Pre Authdebit`CAMPUS CRUSADE F
 Beyond Banking`2016-01-05`-3,022.55`Other`Pre Authdebit`CAPITAL ONE
 Beyond Banking`2016-01-05`-40.62`Other`Pre Authdebit`CITY OF WOODLAND
 Beyond Banking`2016-01-06`-26.61`Other`Pre Authdebit`AMERICAN HERITAG
+Beyond Banking`2016-01-08`-219.89`ATM`Cash Machine`ATM 035786 BOGOR              01/08 3,000,000.00 IDR Or $215.58 + $4.31 Int.Trn.Fee
 Beyond Banking`2016-01-11`-125.60`Other`Pre Authdebit`FARMERS INS
+Beyond Banking`2016-01-11`-234.99`ATM`Cash Machine`ATM 192125 %GATEWY2 KLIA      01/09 1,000.00 MYR Or $230.38 + $4.61 Int.Trn.Fee
 Beyond Banking`2016-01-11`-25.00`BillPay`Bill Payment`JEMS            00880940
 Beyond Banking`2016-01-11`-25.00`BillPay`Bill Payment`OC INTERNATIONAL00880937
 Beyond Banking`2016-01-11`-47.00`Other`Pre Authdebit`ARBELLA MUTUAL
@@ -899,6 +915,7 @@ Beyond Banking`2016-01-12`-50.00`BillPay`Bill Payment`MISSION TO THE W00880934
 Beyond Banking`2016-01-13`-77.01`Other`Pre Authdebit`VERIZON WIRELESS
 Beyond Banking`2016-01-15`-50.00`Other`Pre Authdebit`AFRICA INLAND MI
 Beyond Banking`2016-01-19`-1.50`Other`Pre Authdebit`BANK OF AMERICA
+Beyond Banking`2016-01-19`-183.53`ATM`Cash Machine`ATM 763372 JKT                01/16 2,500,000.00 IDR Or $179.93 + $3.60 Int.Trn.Fee
 Beyond Banking`2016-01-19`-21.20`Other`Pre Authdebit`CHASE
 Beyond Banking`2016-01-19`-23.62`Other`Pre Authdebit`NATIONAL GRID NE
 Beyond Banking`2016-01-19`-50.00`BillPay`Bill Payment`YEKOPE MINISTRIE00880938
@@ -908,13 +925,25 @@ Beyond Banking`2016-01-20`-25.00`BillPay`Bill Payment`HARVEST FAMILY C00880932
 Beyond Banking`2016-01-20`-25.00`BillPay`Bill Payment`SALVATION ARMY  00880933
 Beyond Banking`2016-01-20`-25.00`BillPay`Bill Payment`THE LIVING ROOM 00880862
 Beyond Banking`2016-01-20`-35.00`Other`Pre Authdebit`World Vision
+Beyond Banking`2016-01-21`-100.00`BillPay`Bill Payment`DAVIDA WEGNER   00880103
+Beyond Banking`2016-01-21`-400.00`BillPay`Bill Payment`DAVIDA WEGNER   00880104
+Beyond Banking`2016-01-21`-400.00`BillPay`Bill Payment`DAVIDA WEGNER   00880106
 Beyond Banking`2016-01-22`-25.00`BillPay`Bill Payment`SFVHC BUILDING F00880936
 Beyond Banking`2016-01-25`-25.00`Other`Pre Authdebit`World Gospel Mis
 Beyond Banking`2016-01-26`-50.00`BillPay`Bill Payment`VIETNAMESE EVANG00880939
+Beyond Banking`2016-01-27`-1,621.00`Other`Pre Authdebit`MASS PROPERTY IN
 Beyond Banking`2016-01-28`-122.67`Other`Pre Authdebit`BLACK HILLS UTLH
+Beyond Banking`2016-01-29`0.03`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 01/01 THRU 01/28
 Beyond Banking`2016-01-29`0.04`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 01/01 THRU 01/28
 Beyond Banking`2016-01-29`-27.52`Other`Pre Authdebit`EVERSOURCE
+Beyond Banking`2016-01-29`3.00`ATMRefund`ATM Refund`ATM 0000059 REFUND       WOODLAND PARK      01/27
+Beyond Banking`2016-01-29`-403.00`ATM`Cash Machine`ATM 000059 WOODLAND PARK      01/27
+Beyond Banking`2016-01-29`4,568.58`FundReceipts`DDS`BENEFIT PAYMENTS
+Beyond Banking`2016-02-01`-50.00`Other`Pre Authdebit`WOODLAND PARK CO
+Beyond Banking`2016-02-01`-550.88`BillPay`Bill Payment`PHH MORTGAGE
 Beyond Banking`2016-02-01`-86.89`Other`Pre Authdebit`TDS
+Beyond Banking`2016-02-02`-0.40`Other`Pre Authdebit`INVOICECLOUD-TAX
+Beyond Banking`2016-02-02`-616.74`Other`Pre Authdebit`ICI*BARNSTABLE
 Beyond Banking`2016-02-02`-61.71`Other`Pre Authdebit`INTERMOUNTAIN RU
 Beyond Banking`2016-02-03`-26.61`Other`Pre Authdebit`AMERICAN HERITAG
 Beyond Banking`2016-02-05`-2,055.42`Other`Pre Authdebit`CAPITAL ONE
@@ -923,9 +952,11 @@ Beyond Banking`2016-02-08`-5.25`Other`Pre Authdebit`CITY OF WOODLAND
 Beyond Banking`2016-02-09`-25.00`BillPay`Bill Payment`EFCA            00880946
 Beyond Banking`2016-02-10`-100.00`BillPay`Bill Payment`LION OF JUDAH MI00880931
 Beyond Banking`2016-02-10`-25.00`BillPay`Bill Payment`THE LION OF JUDA00880930
+Beyond Banking`2016-02-10`-300.00`BillPay`Bill Payment`LION OF JUDAH MI00880107
 Beyond Banking`2016-02-11`-125.60`Other`Pre Authdebit`FARMERS INS
 Beyond Banking`2016-02-11`-25.00`BillPay`Bill Payment`OC INTERNATIONAL00880948
 Beyond Banking`2016-02-11`-47.00`Other`Pre Authdebit`ARBELLA MUTUAL
+Beyond Banking`2016-02-11`-590.00`Checking`Check 105`CSC FIELD OFFICE 105
 Beyond Banking`2016-02-11`-77.11`Other`Pre Authdebit`VERIZON WIRELESS
 Beyond Banking`2016-02-16`-180.00`BillPay`Bill Payment`BETHANY CHRISTIA00880883
 Beyond Banking`2016-02-16`-25.00`BillPay`Bill Payment`JEMS            00880951
@@ -942,15 +973,28 @@ Beyond Banking`2016-02-19`-1.50`Other`Pre Authdebit`BANK OF AMERICA
 Beyond Banking`2016-02-19`-50.00`BillPay`Bill Payment`VIETNAMESE EVANG00880950
 Beyond Banking`2016-02-22`-25.00`BillPay`Bill Payment`SFVHC BUILDING F00880947
 Beyond Banking`2016-02-22`-35.00`Other`Pre Authdebit`World Vision
+Beyond Banking`2016-02-23`-100.00`BillPay`Bill Payment`LION OF JUDAH MI00880110
 Beyond Banking`2016-02-23`-25.00`BillPay`Bill Payment`THE LION OF JUDA00880941
+Beyond Banking`2016-02-24`10,000.00`Other`Journal Entry`TR FROM 22D12493 N/O KURT M WEGNER TTEE VS 22D12493  UNIT 22D BATCH # = 00037001142
+Beyond Banking`2016-02-24`-21.15`VisaTransactions`Deferred`UNITED PACIFIC 6519 GREENWOOD VIL CO Service Stations PROCESSED
+Beyond Banking`2016-02-25`-3,000.00`FundTransfers`Funds Transfer`TR TO ML   22D12454
 Beyond Banking`2016-02-25`3,000.00`FundTransfers`Funds Transfer`TR FROM ML 22D17287
 Beyond Banking`2016-02-26`-120.82`Other`Pre Authdebit`BLACK HILLS ENRG
 Beyond Banking`2016-02-29`0.02`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 01/29 THRU 02/28
+Beyond Banking`2016-02-29`0.03`DividendAndInterest`Bank Interest`BANK DEPOSIT INTEREST FROM 01/29 THRU 02/28
+Beyond Banking`2016-02-29`-1,675.20`Other`Pre Authdebit`TELLER COUNTY
+Beyond Banking`2016-02-29`-2.50`Other`Pre Authdebit`TELLER CNTY TREA
 Beyond Banking`2016-02-29`-25.60`Other`Pre Authdebit`EVERSOURCE
+Beyond Banking`2016-02-29`4,568.58`FundReceipts`DDS`BENEFIT PAYMENTS
+Beyond Banking`2016-03-01`-50.00`Other`Pre Authdebit`WOODLAND PARK CO
+Beyond Banking`2016-03-01`-550.88`BillPay`Bill Payment`PHH MORTGAGE
 Beyond Banking`2016-03-01`-62.30`Other`Pre Authdebit`INTERMOUNTAIN RU
 Beyond Banking`2016-03-01`-87.11`Other`Pre Authdebit`TDS
 Beyond Banking`2016-03-03`-26.61`Other`Pre Authdebit`AMERICAN HERITAG
 Beyond Banking`2016-03-07`-1,655.60`Other`Pre Authdebit`CAPITAL ONE
+Beyond Banking`2016-03-07`-25.00`BillPay`Bill Payment`CROSSWAY CH OF S00880113
 Beyond Banking`2016-03-07`-25.00`Other`Pre Authdebit`CAMPUS CRUSADE F
+Beyond Banking`2016-03-07`-272.00`BillPay`Bill Payment`VIOLA ASSN INC  00880115
 Beyond Banking`2016-03-07`-33.05`Other`Pre Authdebit`CITY OF WOODLAND
 Beyond Banking`2016-03-08`-158.87`Other`Pre Authdebit`WASTE MANAGEMENT
+Beyond Banking`2016-03-09`-609.26`Other`Journal Entry`TZS WIRE    1,300,000.00 P46067020895 WITHDRAWAL AT  2133.7070 VS 01000076  UNIT 429 BATCH # = 00177000208

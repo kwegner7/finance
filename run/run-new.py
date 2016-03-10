@@ -76,6 +76,17 @@ if __name__ == '__main__':
                 next = Essence.EssenceFinance(orig)          
                 bb.append(next)
 
+    for directory, subdirectories, files in os.walk(folder_joint_beyond_banking):
+        for file in files:
+            csv = os.path.join(directory, file)
+            print "    Combining another joint file:", csv
+
+            # convert original BB to original Finance
+            orig = Original.OrigBeyondBanking(csv, Db.CsvFormatStandard)   
+            next = Essence.EssenceFinance(orig)          
+            bb.append(next)
+
+
     bb.export(os.getcwd()+'/in/BeyondBanking/LATEST_ML.csv') 
 
     # Convert original Finance to sorted original Finance
@@ -115,10 +126,32 @@ if __name__ == '__main__':
         os.getcwd()+'/out/publish/MonthSummary.html')
 
     # obtain views of the model            
+    view = Finance.ViewCategory(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/CategoryDetails.html')
+
+    # obtain views of the model            
     view = Finance.ViewCategorySummary(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/CategorySummary.html')
+
+    # obtain views of the model            
+    view = Finance.ViewSubCategorySummary(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/SubCategorySummary.html')
+ 
+
+    # obtain views of the model            
+    view = Finance.ViewAccountsSummary(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/AccountsSummary.html')
  
 exit()

@@ -61,6 +61,7 @@ class ModelFinance(Model):
         return self.field_names
 
     def isSelectedRow(self, row):
+        print "WARNING: executing isSelectedRow in model.py"
         partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
         ignore_partial_first_month = (partial_first_month == row["YearMonth"])
         return (

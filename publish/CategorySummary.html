@@ -1,0 +1,1109 @@
+<html>
+<head>
+<style type="text/css">
+#OneByTwo 
+{
+   width:100%;
+   font-size:14px;
+   table-layout:auto;
+   border-collapse:collapse;
+   font-family:"Lucida Console", Monaco, monospace;
+   line-height:14px;
+}
+#CsvTable 
+{
+   width:0%;
+   font-size:12px;
+   table-layout:auto;
+   border-collapse:collapse;
+   font-family:"Lucida Console", Monaco, monospace;
+   line-height:12px;
+}
+#CsvTable th
+{
+   padding:3px 10px 3px 10px;
+   font-size:1.0em;
+   color:black;
+   border:1px none #DCDCDC;
+   font-style:italic;
+   background-color:#DCDCDC;
+   text-align:left;
+}
+#CsvTable tr
+{
+   color:black;
+   font-size:1.0em;
+   font-weight:normal;
+   background-color:white;
+}
+#CsvTable td
+{
+   padding:3px 10px 3px 10px;
+   border:1px none grey;
+   text-align:center;
+}
+#CsvTable td.left
+{
+   text-align:left;
+}
+#CsvTable td.right
+{
+   text-align:right;
+}
+#CsvTable td.green
+{
+   color:green;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.funds
+{
+   color:green;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.fundsg
+{
+   color:green;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.fundsr
+{
+   color:red;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.whiter
+{
+   color:black;
+   white-space:nowrap;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.whitel
+{
+   color:black;
+   white-space:nowrap;
+   background-color:white;
+   text-align:left;
+}
+#CsvTable td.red
+{
+   color:red;
+   background-color:white;
+   text-align:right;
+}
+#CsvTable td.center
+{
+   text-align:center;
+}
+#CsvTable td.nowrapl
+{
+   white-space:nowrap;
+   text-align:left;
+}
+#CsvTable td.nowrapr
+{
+   white-space:nowrap;
+   text-align:right;
+}
+#CsvTable td.nowrapc
+{
+   white-space:nowrap;
+   text-align:center;
+}
+#CsvTable td.date
+{
+   white-space:nowrap;
+   font-family:"Lucida Console", Monaco, monospace;
+   text-align:right;
+}
+#CsvTable td.hide
+{
+   background-color:white;
+   visibility:hidden;
+}
+</style>
+</head>
+<body style="font-size:14px; line-height:14px; margin:10px 1px 30px 100px;">
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=Banking></a>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-4.05</td>
+  <td class=red>-4.05</td>
+  <td class=red>-0.34</td>
+  <td class=nowrapr>1 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>1,412.60</td>
+  <td class=red>-4,582.47</td>
+  <td class=red>-3,169.87</td>
+  <td class=red>-264.16</td>
+  <td class=nowrapr>31 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>4,607.09</td>
+  <td class=red>-2,075.70</td>
+  <td class=green>2,531.39</td>
+  <td class=green>210.95</td>
+  <td class=nowrapr>34 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Banking</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.06</td>
+  <td class=green>0.00</td>
+  <td class=green>0.06</td>
+  <td class=green>0.01</td>
+  <td class=nowrapr>2 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=CarExpense></a>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-3,606.38</td>
+  <td class=red>-3,606.38</td>
+  <td class=red>-300.53</td>
+  <td class=nowrapr>52 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>609.76</td>
+  <td class=red>-7,389.88</td>
+  <td class=red>-6,780.12</td>
+  <td class=red>-565.01</td>
+  <td class=nowrapr>120 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-2,784.31</td>
+  <td class=red>-2,784.31</td>
+  <td class=red>-232.03</td>
+  <td class=nowrapr>74 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Car Expense</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-360.48</td>
+  <td class=red>-360.48</td>
+  <td class=red>-30.04</td>
+  <td class=nowrapr>11 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=CharitableDonations></a>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-3.66</td>
+  <td class=red>-3.66</td>
+  <td class=red>-0.30</td>
+  <td class=nowrapr>1 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-8,325.00</td>
+  <td class=red>-8,325.00</td>
+  <td class=red>-693.75</td>
+  <td class=nowrapr>177 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-16,273.79</td>
+  <td class=red>-16,273.79</td>
+  <td class=red>-1,356.15</td>
+  <td class=nowrapr>223 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>Charitable Donations</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,515.00</td>
+  <td class=red>-1,515.00</td>
+  <td class=red>-126.25</td>
+  <td class=nowrapr>34 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=Clothing></a>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>32.69</td>
+  <td class=red>-5,153.97</td>
+  <td class=red>-5,121.28</td>
+  <td class=red>-426.77</td>
+  <td class=nowrapr>23 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>1,791.69</td>
+  <td class=red>-8,659.67</td>
+  <td class=red>-6,867.98</td>
+  <td class=red>-572.33</td>
+  <td class=nowrapr>56 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>952.54</td>
+  <td class=red>-8,524.15</td>
+  <td class=red>-7,571.61</td>
+  <td class=red>-630.97</td>
+  <td class=nowrapr>63 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>Clothing</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>247.65</td>
+  <td class=red>-762.34</td>
+  <td class=red>-514.69</td>
+  <td class=red>-42.89</td>
+  <td class=nowrapr>21 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=CreditCard></a>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>312.02</td>
+  <td class=green>0.00</td>
+  <td class=green>312.02</td>
+  <td class=green>26.00</td>
+  <td class=nowrapr>1 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>978.26</td>
+  <td class=red>-354.69</td>
+  <td class=green>623.57</td>
+  <td class=green>51.96</td>
+  <td class=nowrapr>21 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>839.25</td>
+  <td class=red>-5.50</td>
+  <td class=green>833.75</td>
+  <td class=green>69.48</td>
+  <td class=nowrapr>14 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Credit Card</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>100.00</td>
+  <td class=red>-3.00</td>
+  <td class=green>97.00</td>
+  <td class=green>8.08</td>
+  <td class=nowrapr>3 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=Entertainment></a>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-808.89</td>
+  <td class=red>-808.89</td>
+  <td class=red>-67.41</td>
+  <td class=nowrapr>21 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-2,361.01</td>
+  <td class=red>-2,361.01</td>
+  <td class=red>-196.75</td>
+  <td class=nowrapr>87 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-717.42</td>
+  <td class=red>-717.42</td>
+  <td class=red>-59.78</td>
+  <td class=nowrapr>49 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Entertainment</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-405.04</td>
+  <td class=red>-405.04</td>
+  <td class=red>-33.75</td>
+  <td class=nowrapr>10 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=Food></a>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-5,282.12</td>
+  <td class=red>-5,282.12</td>
+  <td class=red>-440.18</td>
+  <td class=nowrapr>168 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-8,883.40</td>
+  <td class=red>-8,883.40</td>
+  <td class=red>-740.28</td>
+  <td class=nowrapr>421 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>4.34</td>
+  <td class=red>-7,606.69</td>
+  <td class=red>-7,602.35</td>
+  <td class=red>-633.53</td>
+  <td class=nowrapr>380 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>Food</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-986.21</td>
+  <td class=red>-986.21</td>
+  <td class=red>-82.18</td>
+  <td class=nowrapr>37 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=GovernmentTaxes></a>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>5,586.00</td>
+  <td class=red>-88.58</td>
+  <td class=green>5,497.42</td>
+  <td class=green>458.12</td>
+  <td class=nowrapr>7 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Government Taxes</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>1,039.64</td>
+  <td class=red>-4,344.37</td>
+  <td class=red>-3,304.73</td>
+  <td class=red>-275.39</td>
+  <td class=nowrapr>7 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=HouseExpenseCO></a>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>43.00</td>
+  <td class=red>-374.94</td>
+  <td class=red>-331.94</td>
+  <td class=red>-27.66</td>
+  <td class=nowrapr>2 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-13,835.33</td>
+  <td class=red>-13,835.33</td>
+  <td class=red>-1,152.94</td>
+  <td class=nowrapr>70 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-16,836.04</td>
+  <td class=red>-16,836.04</td>
+  <td class=red>-1,403.00</td>
+  <td class=nowrapr>94 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>House Expense CO</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,204.32</td>
+  <td class=red>-1,204.32</td>
+  <td class=red>-100.36</td>
+  <td class=nowrapr>16 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=HouseExpenseMA></a>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-40.00</td>
+  <td class=red>-40.00</td>
+  <td class=red>-3.33</td>
+  <td class=nowrapr>1 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-7,738.73</td>
+  <td class=red>-7,738.73</td>
+  <td class=red>-644.89</td>
+  <td class=nowrapr>51 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-13,082.82</td>
+  <td class=red>-13,082.82</td>
+  <td class=red>-1,090.23</td>
+  <td class=nowrapr>68 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FFDAB9;">
+  <td class=nowrapl>House Expense MA</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-443.34</td>
+  <td class=red>-443.34</td>
+  <td class=red>-36.95</td>
+  <td class=nowrapr>9 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=Income></a>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Income</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>47,279.20</td>
+  <td class=green>0.00</td>
+  <td class=green>47,279.20</td>
+  <td class=green>3,939.93</td>
+  <td class=nowrapr>10 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#E6E6FA;">
+  <td class=nowrapl>Income</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>58,737.04</td>
+  <td class=green>0.00</td>
+  <td class=green>58,737.04</td>
+  <td class=green>4,894.75</td>
+  <td class=nowrapr>12 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=MedicalDental></a>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-2,317.87</td>
+  <td class=red>-2,317.87</td>
+  <td class=red>-193.16</td>
+  <td class=nowrapr>12 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-2,571.80</td>
+  <td class=red>-2,571.80</td>
+  <td class=red>-214.32</td>
+  <td class=nowrapr>22 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-3,706.26</td>
+  <td class=red>-3,706.26</td>
+  <td class=red>-308.86</td>
+  <td class=nowrapr>34 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:lightpink;">
+  <td class=nowrapl>Medical/Dental</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-79.83</td>
+  <td class=red>-79.83</td>
+  <td class=red>-6.65</td>
+  <td class=nowrapr>3 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=OtherPurchase></a>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>42.92</td>
+  <td class=red>-6,694.64</td>
+  <td class=red>-6,651.72</td>
+  <td class=red>-554.31</td>
+  <td class=nowrapr>109 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>106.74</td>
+  <td class=red>-11,884.80</td>
+  <td class=red>-11,778.06</td>
+  <td class=red>-981.50</td>
+  <td class=nowrapr>200 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>575.58</td>
+  <td class=red>-17,144.02</td>
+  <td class=red>-16,568.44</td>
+  <td class=red>-1,380.70</td>
+  <td class=nowrapr>212 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#CCFFCC;">
+  <td class=nowrapl>Other Purchase</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>190.00</td>
+  <td class=red>-1,818.08</td>
+  <td class=red>-1,628.08</td>
+  <td class=red>-135.67</td>
+  <td class=nowrapr>59 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=School></a>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>School</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>0.00</td>
+  <td class=red>-2,121.84</td>
+  <td class=red>-2,121.84</td>
+  <td class=red>-176.82</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#FEF1B5;">
+  <td class=nowrapl>School</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>0.00</td>
+  <td class=red>-1,987.44</td>
+  <td class=red>-1,987.44</td>
+  <td class=red>-165.62</td>
+  <td class=nowrapr>6 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=Travel></a>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>2013</td>
+  <td class=green>0.00</td>
+  <td class=red>-4,287.02</td>
+  <td class=red>-4,287.02</td>
+  <td class=red>-357.25</td>
+  <td class=nowrapr>44 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>2014</td>
+  <td class=green>151.85</td>
+  <td class=red>-13,533.42</td>
+  <td class=red>-13,381.57</td>
+  <td class=red>-1,115.13</td>
+  <td class=nowrapr>79 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>172.00</td>
+  <td class=red>-11,037.17</td>
+  <td class=red>-10,865.17</td>
+  <td class=red>-905.43</td>
+  <td class=nowrapr>68 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#EED2EE;">
+  <td class=nowrapl>Travel</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>0.00</td>
+  <td class=red>-467.60</td>
+  <td class=red>-467.60</td>
+  <td class=red>-38.97</td>
+  <td class=nowrapr>4 transactions</td>
+</tr>
+</table>
+<table id="CsvTable">
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+   <col width=0%>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+   <th style="font-size:1.0em; text-align:left; white-space:nowrap;">Year</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;Balance</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;Ave Month</th>
+   <th style="font-size:1.0em; text-align:right; white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</th>
+</tr>
+<a name=UNKNOWN_CATEGORY></a>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>UNKNOWN_CATEGORY</td>
+  <td class=nowrapl>2015</td>
+  <td class=green>10,111.10</td>
+  <td class=red>-13,601.97</td>
+  <td class=red>-3,490.87</td>
+  <td class=red>-290.91</td>
+  <td class=nowrapr>39 transactions</td>
+</tr>
+<tr style="font-weight:normal;background-color:#DAF4F0;">
+  <td class=nowrapl>UNKNOWN_CATEGORY</td>
+  <td class=nowrapl>2016</td>
+  <td class=green>326.18</td>
+  <td class=red>-1,488.57</td>
+  <td class=red>-1,162.39</td>
+  <td class=red>-96.87</td>
+  <td class=nowrapr>33 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+<tr style="font-weight:normal;background-color:white;">
+  <td class=nowrapl>Grand Total </td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=green>136,249.20</td>
+  <td class=red>-250,165.62</td>
+  <td class=red>-113,916.42</td>
+  <td class=nowrapl>&nbsp;</td>
+  <td class=nowrapr>3412 transactions</td>
+</tr>
+<tr>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+  <td style="background-color:white; border-style:none">&nbsp;</td>
+</tr>
+</table>
+</body></html>

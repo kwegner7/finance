@@ -1,6 +1,17 @@
 '''
-    This script reads one year + one month
-    of Beyond Banking and htmls several reports
+    Obtain Joint BB downloads for the year 2015 (Mar 10 and prev 2 yrs)
+        I want to download account data - All Downloadable Activity
+        /home/orig/kurt/Documents/institutions/original/ml-jointbb/downloaded2016-03-10    
+    
+    Obtain Beyond Banking downloads for the year 2015 (Mar 10 and prev 2 yrs)
+        /home/orig/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2016-03-10        
+    
+    Obtain Capital One Mint downloads for the year 2015
+        open Mint - select Capital One - Download all transactions
+        /home/orig/kurt/Documents/institutions/original/mint-capital-one/downloaded2016-03-10 
+   
+    Obtain Chase Mint downloads for the year 2015    
+        /home/orig/kurt/Documents/institutions/original/mint-chase/downloaded2016-03-10    
 '''
 
 #===============================================================================
@@ -24,19 +35,33 @@ from db.finance import Finance, Original, Essence
 #===============================================================================
 if __name__ == '__main__':
 
+    folder_beyond_banking = \
+    "/home/orig/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2016-03-10" 
+       
+    folder_beyond_banking_was = \
+    "/home/orig/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2015-10-11"   
+     
+    folder_joint_beyond_banking = \
+    "/home/orig/kurt/Documents/institutions/original/ml-jointbb/downloaded2016-03-10"        
+
+    mint_capital_one = \
+    "/home/orig/kurt/Documents/institutions/original/mint-capital-one/downloaded2016-03-10/transactions.csv"        
+
+    mint_chase = \
+    "/home/orig/kurt/Documents/institutions/original/mint-chase/downloaded2016-03-10/transactions.csv"        
+            
+    #===========================================================================
+    # Append all csv files in a folder to produce LATEST_ML_SORTED.csv
+    #===========================================================================
     print "------------------------------------------------------------------"
     print "Runtime path to the in and out folders is", os.getcwd()
     print "Module path is:"
     for folder in sys.path:
         print "   ", folder
     print "------------------------------------------------------------------"
-            
-    #===========================================================================
-    # Append all csv files in a folder to produce LATEST_ML_SORTED.csv
-    #===========================================================================
-    latest_bb_downloads = "/home/orig/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2015-10-11"        
+
     first_time = True        
-    for directory, subdirectories, files in os.walk(latest_bb_downloads):
+    for directory, subdirectories, files in os.walk(folder_beyond_banking):
         for file in files:
             csv = os.path.join(directory, file)
             print "    Combining another file:", csv
@@ -50,6 +75,7 @@ if __name__ == '__main__':
                 orig = Original.OrigBeyondBanking(csv, Db.CsvFormatStandard)   
                 next = Essence.EssenceFinance(orig)          
                 bb.append(next)
+
     bb.export(os.getcwd()+'/in/BeyondBanking/LATEST_ML.csv') 
 
     # Convert original Finance to sorted original Finance
@@ -66,42 +92,33 @@ if __name__ == '__main__':
     orig = Finance.OrigEssence(csv)   
     essence = Finance.Essence(orig) 
     
-    csv = '/home/orig/kurt/Documents/institutions/original/mint-capital-one/download2015-10-13.csv'
-    orig = Finance.OrigMint(csv, Db.CsvFormatStandard)   
+    orig = Finance.OrigMint(mint_capital_one, Db.CsvFormatStandard)   
     essence.append(Finance.Essence(orig)) 
              
-    csv = '/home/orig/kurt/Documents/institutions/original/mint-chase/download2015-10-13.csv'
-    orig = Finance.OrigMint(csv, Db.CsvFormatStandard)   
+    orig = Finance.OrigMint(mint_chase, Db.CsvFormatStandard)   
     essence.append(Finance.Essence(orig)) 
 
     model = Finance.Model(essence)
 
     # obtain views of the model            
     view = Finance.ViewMonth(model)
-    html = view.pages(os.getcwd()+'/../publish')
+    html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
-        os.getcwd()+'/../publish/out.html',
-        os.getcwd()+'/../publish/MonthDetails.html')
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/MonthDetails.html')
 
     # obtain views of the model            
     view = Finance.ViewMonthSummary(model)
-    html = view.pages(os.getcwd()+'/../publish')
+    html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
-        os.getcwd()+'/../publish/out.html',
-        os.getcwd()+'/../publish/MonthSummary.html')
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/MonthSummary.html')
 
     # obtain views of the model            
-    view = Finance.ViewSubCategory(model)
-    html = view.pages(os.getcwd()+'/../publish')
+    view = Finance.ViewCategorySummary(model)
+    html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
-        os.getcwd()+'/../publish/out.html',
-        os.getcwd()+'/../publish/SubCategoryDetails.html')
-
-    # obtain views of the model            
-    view = Finance.ViewSubCategorySummary(model)
-    html = view.pages(os.getcwd()+'/../publish')
-    os.rename(
-        os.getcwd()+'/../publish/out.html',
-        os.getcwd()+'/../publish/SubCategorySummary.html')
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/CategorySummary.html')
  
 exit()

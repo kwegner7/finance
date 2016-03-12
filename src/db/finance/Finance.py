@@ -107,7 +107,9 @@ class Model(Db.Model):
         )
         return True
 
+    # FIXTHIS
     def isSelectedRow(self, row):
+        return True
         return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 
     def sortBeforeTransform(self): 

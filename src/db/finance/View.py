@@ -136,7 +136,9 @@ class ViewFinance(View):
         self.total_category = Db.Total(['Category'])
         return
 
+    # FIXTHIS
     def isSelectedRow(self, row): 
+        return True
         return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 
     def transform(self, this_row, next_row):
@@ -215,7 +217,9 @@ class ViewMonth(ViewFinance):
         return list([ 'Year', ])
 
     def htmlPresentation(self, dirpath):
-        HtmlMonthDetails(self, dirpath)
+        HtmlStdWithTotals(self, dirpath)
+        return
+        HtmlStdNoTotals(self, dirpath)
         return
                 
 __all__ += ["ViewMonthSummary"]

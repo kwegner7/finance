@@ -699,13 +699,18 @@ class Base(AbstractMethods):
     ####################################################################
     
     '''
+      'Date'      'Amount'     'Account'
+       
       Credit      5,043.14     Aug 2015            
       Debit     -10,918.16                
       Balance    -5,875.02     131 transactions
     '''
     def doSummaryFollowingSubsection(self,
-            bottom_row_prev_section, is_final_row=False,
-            section='', subsection='', show_monthly=False):
+            bottom_row_prev_section,
+            is_final_row=False,
+            section='',        # this will be printed first row right column
+            subsection='',     # this will be printed second row right column
+            show_monthly=False):
                 
         color = self.background_color
         cols = self.orderedHtmlColumns()

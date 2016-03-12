@@ -16,90 +16,100 @@ from html.HtmlTable import Base, UsualDefaults
 __all__ = \
 [
     "UsualDefaults",
-    "HtmlModern",
+    "HtmlStdWithTotals",
+]
 
-]
-'''
-    "HtmlModernCategory",
-    "HtmlModernSubcategory",
-    "HtmlModernSummary",
-    "HtmlMonthSummary",
-    "HtmlCategorySummary",
-    "HtmlModernAccounts",
-    "HtmlModernNew",
-    "HtmlSubcategorySummary",
-    "HtmlAccountSummary",
-    "HtmlGeneric",
-    "HtmlSimple",
-    "Html_Finance_Default",
-    "Html_Finance_Study",
-    "Html_Monthly",
-    "Html_Natural",
-    "Html_NaturalMonth",
-    "Html_NaturalCategory",
-    "Html_NaturalSubcategory",
-    "Html_NaturalCategoryYear",
-    "Html_NaturalSubcategoryYear",
-    "Html_NaturalAccountYear",
-]
-'''
-#===============================================================================
-# HtmlModern 
-#===============================================================================
-__all__ +=  ['HtmlModern']      
-class HtmlModern(UsualDefaults):
+__all__ +=  ['HtmlStdNoTotals']      
+class HtmlStdNoTotals(UsualDefaults):
 
     def __init__(self, db, folder_html=None):
         self.db = db
-        self.section_field = db.sectionChange()[-1] # year
-        self.subsection_field = db.subsectionChange()[-1] # category
+        self.subsection_field = db.subsectionChange()[-1] # 'Year', 'YearMonth',
+        self.section_field = db.sectionChange()[-1] # 'Year', 
         UsualDefaults.__init__(self, db, False, folder_html)
 
     def summaryOnly(self):
         return False
 
+    # 3 blank rows before each section
     def titlePrecedingSection(self, first_row):
         self.writeRowsOfColor('white', 3)
         return
 
+    # 1 blank rows before each sub-section
     def titlePrecedingSubsection(self, first_row):
         self.writeRowsOfColor('white', 1)
         return
 
+    # 1 row using the headings from columns()
     def tableHeadings(self):
         return Base.tableHeadings(self)
-
-    def columnss(self):
+         
+    # Fieldname / Title / Percent / Style / Font
+    def extra_columns(self):
         nature_of_columns = ([
-        self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
-        self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
-        self.cfg('Amount'             , 'Amount'                  ,   0,   'funds', '1.0' ),
-        #self.cfg('TotalMonth'         , 'TotalMonth'              ,   0,   'funds', '1.0' ),
-        #self.cfg('TotalYear'          , 'TotalYear'               ,   0,   'funds', '1.0' ),
-        self.cfg('Account'            , 'Account Name'            ,   0, 'nowrapl', '1.0' ),
-        self.cfg('Category'           , 'Category'                ,   0, 'nowrapl', '1.0' ),
-        self.cfg('Subcategory'        , 'Subcategory'             ,   0, 'nowrapl', '1.0' ),        
-        #self.cfg('TransferMech1'      , 'Trans1'                  ,   0,  'whitel', '1.0' ),
-        #self.cfg('TransferMech2'      , 'Trans2'                  ,   0,  'whitel', '1.0' ),
-        #self.cfg('AccountAlias'       , 'Transaction Details'     ,   0,  'whitel', '1.0' ),
+        self.cfg('TotalMonth'    , 'TotalMonth'          ,   0,   'funds', '1.0' ),
+        self.cfg('TotalYear'     , 'TotalYear'           ,   0,   'funds', '1.0' ),
+        self.cfg('TransferMech1' , 'Trans1'              ,   0,  'whitel', '1.0' ),
+        self.cfg('TransferMech2' , 'Trans2'              ,   0,  'whitel', '1.0' ),
+        self.cfg('AccountAlias'  , 'Transaction Details' ,   0,  'whitel', '1.0' ),
+        ])
+        return nature_of_columns
+    
+    # Fieldname / Title / Percent / Style / Font
+    def columns(self):
+        nature_of_columns = ([
+        self.cfg('Institution' , 'Institution'   ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Date'        , 'Date'          ,   0,    'date', '1.0' ),
+        self.cfg('Amount'      , 'Amount'        ,   0,   'funds', '1.0' ),
+        self.cfg('Account'     , 'Account Name'  ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Category'    , 'Category'      ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Subcategory' , 'Subcategory'   ,   0, 'nowrapl', '1.0' ),        
         ])
         return nature_of_columns
 
     def summaryFollowingSubsection(self, bottom_row_prev_section, is_final_row=False):
-        show_monthly = False             
-        subsection_value = bottom_row_prev_section[self.subsection_field] 
+        return None
+
+    def summaryFollowingSection(self, bottom_row_prev_section):
+        return None
+
+    def summaryAtEnd(self, bottom_row_prev_section):
+        return None
+
+#===============================================================================
+# HtmlStdWithTotals 
+#===============================================================================
+'''
+This is the standard way to present transactions in an html list
+grouped into sections and subsections. At the end of each section and subsection
+are the sub-totals. There is also a complete totals at the end of the html.
+'''
+__all__ +=  ['HtmlStdWithTotals']      
+class HtmlStdWithTotals(HtmlStdNoTotals):
+
+    def __init__(self, db, folder_html=None):
+       HtmlStdNoTotals.__init__(self, db, folder_html)
+
+    # section='',      this will be printed first row right column
+    # subsection='',   this will be printed second row right column
+    def summaryFollowingSubsection(self, bottom_row_prev_section, is_final_row=False):
+        show_monthly = False  # show the monthly average           
+        right_top = bottom_row_prev_section[self.subsection_field] # month
+        right_middle = ' '
         if self.subsection_field == 'YearMonth':
-            subsection_value = convertStandardDateToYearMonth1(bottom_row_prev_section['Date']) 
-        self.doSummaryFollowingSubsection(bottom_row_prev_section, is_final_row, subsection_value, ' ', show_monthly)
+            right_top = convertStandardDateToYearMonth1(bottom_row_prev_section['Date']) 
+        self.doSummaryFollowingSubsection(bottom_row_prev_section, is_final_row, right_top, right_middle, show_monthly)
         return
 
     def summaryFollowingSection(self, bottom_row_prev_section, is_final_row=False):
         show_monthly = False             
-        section_value = bottom_row_prev_section[self.section_field] 
+        right_top = bottom_row_prev_section[self.section_field] 
+        right_middle = ' '
         if self.section_field == 'Year' and self.subsection_field == 'YearMonth':
             show_monthly = True             
-            section_value = 'Year '+bottom_row_prev_section['Year']              
-        self.doSummaryFollowingSection(bottom_row_prev_section, is_final_row,section_value, ' ', show_monthly)
+            right_top = 'Year '+bottom_row_prev_section['Year']              
+        self.doSummaryFollowingSection(bottom_row_prev_section, is_final_row, right_top, right_middle, show_monthly)
         return
 
     def summaryAtEnd(self, bottom_row_prev_section):
@@ -110,10 +120,10 @@ class HtmlModern(UsualDefaults):
 # HtmlModernSummary 
 #===============================================================================
 __all__ +=  ['HtmlModernSummary']      
-class HtmlModernSummary(HtmlModern):
+class HtmlModernSummary(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
     def summaryOnly(self):
         return True
@@ -242,21 +252,28 @@ class HtmlModernSummary(HtmlModern):
 
 
 __all__ +=  ['HtmlMonthDetails']      
-class HtmlMonthDetails(HtmlModern):
+class HtmlMonthDetails(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
-    def columns(self):
-        nature_of_columns = ([
-        self.cfg('Institution'        , 'Institution'             ,   0, 'nowrapl', '1.0' ),
-        self.cfg('Date'               , 'Date'                    ,   0,    'date', '1.0' ),
-        self.cfg('Amount'             , 'Amount'                  ,   0,   'funds', '1.0' ),
-        self.cfg('Account'            , 'Account Name'            ,   0, 'nowrapl', '1.0' ),
-        self.cfg('Category'           , 'Category'                ,   0, 'nowrapl', '1.0' ),
-        self.cfg('Subcategory'        , 'Subcategory'             ,   0, 'nowrapl', '1.0' ),        
-        ])
-        return nature_of_columns
+    def sectionRightTop(self, last_row):
+        return ""
+
+    def sectionRightMiddle(self, last_row):
+        return ""
+
+    def sectionShowMonthlyAve(self):
+        return True
+
+    def sectionRightTop(self, last_row):
+        return ""
+
+    def subsectionRightMiddle(self, last_row):
+        return ""
+
+    def subsectionShowMonthlyAve(self):
+        return True
 
 
 __all__ +=  ['HtmlMonthSummary']      
@@ -277,10 +294,10 @@ class HtmlMonthSummary(HtmlModernSummary):
 
 
 __all__ +=  ['HtmlAccountsDetails']      
-class HtmlAccountsDetails(HtmlModern):
+class HtmlAccountsDetails(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
     def columns(self):
         nature_of_columns = ([
@@ -312,10 +329,10 @@ class HtmlAccountsSummary(HtmlModernSummary):
 
 
 __all__ +=  ['HtmlCategoryDetails']      
-class HtmlCategoryDetails(HtmlModern):
+class HtmlCategoryDetails(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
     def columns(self):
         nature_of_columns = ([
@@ -522,10 +539,10 @@ class HtmlCheckMint(UsualDefaults):
         return
 
 #2A
-class HtmlModernCategory(HtmlModern):
+class HtmlModernCategory(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html=None):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
     def summaryFollowingSubsection(self, bottom_row_prev_section, is_final_row=False):
         self.doSummaryFollowingSubsection(bottom_row_prev_section, is_final_row,
@@ -542,10 +559,10 @@ class HtmlModernCategory(HtmlModern):
         return
 
 #3A
-class HtmlModernSubcategory(HtmlModern):
+class HtmlModernSubcategory(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html=None):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
     def summaryFollowingSubsection(self, bottom_row_prev_section, is_final_row=False):
         self.doSummaryFollowingSubsection(bottom_row_prev_section, is_final_row,
@@ -750,10 +767,10 @@ class HtmlAccountSummary(HtmlCategorySummary):
 
 
         
-class HtmlModernAccounts(HtmlModern):
+class HtmlModernAccounts(HtmlStdWithTotals):
 
     def __init__(self, db, folder_html=None):
-        HtmlModern.__init__(self, db, folder_html)
+        HtmlStdWithTotals.__init__(self, db, folder_html)
 
     def columns(self):
         nature_of_columns = ([

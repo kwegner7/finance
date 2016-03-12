@@ -87,6 +87,7 @@ class Model(Db.Model):
         return FieldNames.model
 
     def isSelectedRow(self, row):
+        print "FIXTHIS isSelectedRow in class Model"
         partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
         ignore_partial_first_month = (partial_first_month == row["YearMonth"])
         return (

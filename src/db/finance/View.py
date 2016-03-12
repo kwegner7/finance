@@ -29,7 +29,7 @@ class ViewGeneric(View):
     def fieldNames(self):
         return list([ 'Count' ]) + self.master_fields
         
-    def isSelectedRow(self, row):
+    def isSelectedRoww(self, row):
         return True
 
     def initializeTransform(self):

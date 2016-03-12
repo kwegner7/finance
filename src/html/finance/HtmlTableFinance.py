@@ -156,6 +156,8 @@ class HtmlStdSummary(HtmlStdWithTotals):
         stuff['CountRunning'] = bottom_row_prev_section['CountSubsection']+' transactions'
         stuff['AccountAlias'] = bottom_row_prev_section['Category']
         stuff['Account']      = bottom_row_prev_section['Subcategory']
+        stuff['Date']         = avePerMonth(bottom_row_prev_section['TotalSubsection'])
+
         self.insertOneSummaryRecord(stuff, color, 'normal')              
         return
     
@@ -333,6 +335,7 @@ class HtmlCategorySummary(HtmlStdSummary):
         nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('Date'         , 'Ave Per Month', 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
         return nature_of_columns
 
@@ -388,6 +391,7 @@ class HtmlSubCategorySummary(HtmlStdSummary):
         nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('Date'         , 'Ave Per Month', 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
         return nature_of_columns
 
@@ -442,6 +446,7 @@ class HtmlAccountsSummary(HtmlStdSummary):
         nature_of_columns.append(self.cfg('Amount'       , 'Credit'       , 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('DebitRunning' , 'Debit'        , 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('TotalRunning' , 'Balance'      , 0,   'funds', '1.0' ))
+        nature_of_columns.append(self.cfg('Date'         , 'Ave Per Month', 0,   'funds', '1.0' ))
         nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
         return nature_of_columns
 

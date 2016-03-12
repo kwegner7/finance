@@ -94,7 +94,7 @@ class Model(Db.Model):
     def fieldNames(self):
         return FieldNames.model
 
-    def isSelectedRow(self, row):
+    def isSelectedRoww(self, row):
         partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
         ignore_partial_first_month = (partial_first_month == row["YearMonth"])
         return (
@@ -114,6 +114,7 @@ class Model(Db.Model):
 
     # FIXTHIS
     def isSelectedRow(self, row):
+        return row['Year'] == '2015'
         return True
         return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 

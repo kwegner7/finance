@@ -658,7 +658,7 @@ class Model(Transformer):
     
     def sortAfterTransform(self): return list([])
 
-    def isSelectedRow(self, row): return True
+    def isSelectedRoww(self, row): return True
 
     def collapseOnFields(self): return list([])
                 

@@ -217,9 +217,7 @@ class ViewMonth(ViewFinance):
         return list([ 'Year', ])
 
     def htmlPresentation(self, dirpath):
-        HtmlStdWithTotals(self, dirpath)
-        return
-        HtmlStdNoTotals(self, dirpath)
+        HtmlMonthDetails(self, dirpath)
         return
                 
 __all__ += ["ViewMonthSummary"]
@@ -230,39 +228,13 @@ class ViewMonthSummary(ViewMonth):
         return
            
 #===============================================================================
-# Accounts
-#===============================================================================
-__all__ += ["ViewAccounts"]
-class ViewAccounts(ViewFinance):
-
-    def sortBeforeTransform(self): 
-        return list([ 'Year', 'Account', 'Date' ])
-        
-    def subsectionChange(self):
-        return list([  'Year', 'Account', ])
-
-    def sectionChange(self):
-        return list([  'Year', ])
-
-    def htmlPresentation(self, dirpath):
-        HtmlAccountsDetails(self, dirpath)
-        return
-                
-__all__ += ["ViewAccountsSummary"]
-class ViewAccountsSummary(ViewAccounts):
-        
-    def htmlPresentation(self, dirpath):
-        HtmlAccountsSummary(self, dirpath)
-        return
-         
-#===============================================================================
 # Category
 #===============================================================================
 __all__ += ["ViewCategory"]
 class ViewCategory(ViewFinance):
 
     def sortBeforeTransform(self): 
-        return list([ 'Year', 'Category', 'Date' ])
+        return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
         
     def subsectionChange(self):
         return list([ 'Year', 'Category', ])
@@ -288,16 +260,16 @@ __all__ += ["ViewSubCategory"]
 class ViewSubCategory(ViewFinance):
 
     def sortBeforeTransform(self): 
-        return list([ 'Year', 'Category', 'Subcategory', 'Date' ])
+        return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
         
     def subsectionChange(self):
         return list([ 'Year', 'Category', 'Subcategory', ])
 
     def sectionChange(self):
-        return list([ 'Year', 'Category', ])
+        return list([ 'Year', ])
 
     def htmlPresentation(self, dirpath):
-        HtmlSubCategoryDetails(self, dirpath)
+        HtmlSubcategoryDetails(self, dirpath)
         return
                 
 __all__ += ["ViewSubCategorySummary"]
@@ -306,6 +278,33 @@ class ViewSubCategorySummary(ViewSubCategory):
     def htmlPresentation(self, dirpath):
         HtmlSubCategorySummary(self, dirpath)
         return
+    
+#===============================================================================
+# Accounts
+#===============================================================================
+__all__ += ["ViewAccounts"]
+class ViewAccounts(ViewFinance):
+
+    def sortBeforeTransform(self): 
+        return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
+        
+    def subsectionChange(self):
+        return list([ 'Year', 'Category', 'Subcategory', 'Account',  ])
+
+    def sectionChange(self):
+        return list([  'Year', ])
+
+    def htmlPresentation(self, dirpath):
+        HtmlAccountsDetails(self, dirpath)
+        return
+                
+__all__ += ["ViewAccountsSummary"]
+class ViewAccountsSummary(ViewAccounts):
+        
+    def htmlPresentation(self, dirpath):
+        HtmlAccountsSummary(self, dirpath)
+        return
+         
         
 #===============================================================================
 # ViewYearSummary (may be instantiated) 

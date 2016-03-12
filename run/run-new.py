@@ -111,43 +111,58 @@ if __name__ == '__main__':
 
     model = Finance.Model(essence)
 
-    # obtain views of the model            
+    # obtain views of the model 
+    
+    # month           
     view = Finance.ViewMonth(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/MonthDetails.html')
 
-    # obtain views of the model            
+    # month        
     view = Finance.ViewMonthSummary(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/MonthSummary.html')
-
-    # obtain views of the model            
+    
+    # category          
     view = Finance.ViewCategory(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/CategoryDetails.html')
-
-    # obtain views of the model            
+    
+    # category          
     view = Finance.ViewCategorySummary(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/CategorySummary.html')
 
-    # obtain views of the model            
+    # subcategory            
+    view = Finance.ViewSubCategory(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/SubCategoryDetails.html')
+    
+    # subcategory          
     view = Finance.ViewSubCategorySummary(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/SubCategorySummary.html')
  
+    # accounts            
+    view = Finance.ViewAccounts(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/AccountsDetails.html')
 
-    # obtain views of the model            
+    # accounts            
     view = Finance.ViewAccountsSummary(model)
     html = view.pages(os.getcwd()+'/out/publish')
     os.rename(

@@ -65,12 +65,17 @@ class FieldNames():
 # Views of the Model
 #===============================================================================
 class ViewFinance(View.ViewFinance): pass
+
 class ViewMonth(View.ViewMonth): pass
 class ViewMonthSummary(View.ViewMonthSummary): pass
+
 class ViewCategory(View.ViewCategory): pass
 class ViewCategorySummary(View.ViewCategorySummary): pass
+
 class ViewSubCategory(View.ViewSubCategory): pass
 class ViewSubCategorySummary(View.ViewSubCategorySummary): pass
+
+class ViewAccounts(View.ViewAccounts): pass
 class ViewAccountsSummary(View.ViewAccountsSummary): pass
 
 #===============================================================================

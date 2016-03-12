@@ -736,6 +736,13 @@ class Base(AbstractMethods):
         stuff['Account'] = bottom_row_prev_section['CountSubsection']+' transactions'
         self.insertOneSummaryRecord(stuff, color, 'normal')  
                     
+        if show_monthly:
+            stuff = self.blankColumns()
+            stuff['Date'] = 'Month Ave' 
+            stuff['Amount'] = avePerMonth(bottom_row_prev_section['TotalSubsection'])
+            stuff['Account'] = '&nbsp;'
+            self.insertOneSummaryRecord(stuff, color, 'normal')  
+                    
         self.writeRowsOfColor(color, 1, False)
         return
 
@@ -751,8 +758,8 @@ class Base(AbstractMethods):
         stuff = self.blankColumns()
         stuff['Date'] = 'Credit'
         stuff['Amount'] = subtractStrings( 
-                              bottom_row_prev_section['TotalSubsection'],
-                              bottom_row_prev_section['DebitSubsection'])    
+                              bottom_row_prev_section['TotalSection'],
+                              bottom_row_prev_section['DebitSection'])    
         stuff['Account'] = section       
         self.insertOneSummaryRecord(stuff, color, 'normal')  
         
@@ -771,13 +778,7 @@ class Base(AbstractMethods):
         if show_monthly:
             stuff = self.blankColumns()
             stuff['Date'] = 'Month Ave'
-            stuff['Amount'] = avePerMonth(
-                bottom_row_prev_section['TotalSection'],
-                bottom_row_prev_section['TotalSubsection'],
-                bottom_row_prev_section['YearMonth'],
-                self.db.master_first_row,
-                self.db.master_last_row
-            )
+            stuff['Amount'] = avePerMonth(bottom_row_prev_section['TotalSection'])
             stuff['Account'] = '&nbsp;'
             self.insertOneSummaryRecord(stuff, color, 'normal')  
 

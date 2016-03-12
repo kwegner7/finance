@@ -981,6 +981,13 @@ def avePerMonth(total_year_text, total_month_text='', year_month='', master_firs
     ave_per_month = total_year/number_months
     return formatDollars(ave_per_month)
 
+def avePerMonth(total_year_text, total_month_text='', year_month='', master_first_row=dict(), master_last_row=dict()):
+    number_months = 12.0
+    total_year = getFloatNoCommas(total_year_text)
+    ave_per_month = total_year/number_months
+    return formatDollars(ave_per_month)
+
+
 def getPaypalAdjusted(amount_text, is_usa_payment=True):
     if is_usa_payment:
         # 2.9% plus $0.30

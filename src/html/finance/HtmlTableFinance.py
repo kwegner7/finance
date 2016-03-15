@@ -283,6 +283,49 @@ class HtmlMonthSummary(HtmlStdSummary):
         nature_of_columns.append(self.cfg('CountRunning' , 'Transactions' , 0, 'nowrapr', '1.0' ))
         return nature_of_columns
 
+##################################################################################
+# Study
+##################################################################################
+__all__ +=  ['HtmlStudyDetails']      
+class HtmlStudyDetails(HtmlStdWithTotals):
+
+    def __init__(self, db, folder_html):
+        HtmlStdWithTotals.__init__(self, db, folder_html)
+        
+    def subsectionRightTop(self, bottom_row_prev_section):
+        return 'Year '+bottom_row_prev_section['Year'] 
+
+    def sectionRightTop(self, bottom_row_prev_section):
+        return 'Year '+bottom_row_prev_section['Year'] 
+
+    def sectionShowMonthlyAve(self):
+        return False
+         
+    # Fieldname / Title / Percent / Style / Font
+    def extra_columns(self):
+        nature_of_columns = ([
+        self.cfg('TotalMonth'    , 'TotalMonth'          ,   0,   'funds', '1.0' ),
+        self.cfg('TotalYear'     , 'TotalYear'           ,   0,   'funds', '1.0' ),
+        self.cfg('TransferMech1' , 'Trans1'              ,   0,  'whitel', '1.0' ),
+        self.cfg('TransferMech2' , 'Trans2'              ,   0,  'whitel', '1.0' ),
+        self.cfg('AccountAlias'  , 'Transaction Details' ,   0,  'whitel', '1.0' ),
+        ])
+        return nature_of_columns
+    
+    # Fieldname / Title / Percent / Style / Font
+    def columns(self):
+        nature_of_columns = ([
+        self.cfg('Institution' , 'Institution'   ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Date'        , 'Date'          ,   0,    'date', '1.0' ),
+        self.cfg('Amount'      , 'Amount'        ,   0,   'funds', '1.0' ),
+        self.cfg('Account'     , 'Account Name'  ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Category'    , 'Category'      ,   0, 'nowrapl', '1.0' ),
+        self.cfg('Subcategory' , 'Subcategory'   ,   0, 'nowrapl', '1.0' ),        
+        self.cfg('TransferMech1' , 'Trans1'              ,   0,  'whitel', '1.0' ),
+        self.cfg('TransferMech2' , 'Trans2'              ,   0,  'whitel', '1.0' ),
+        self.cfg('AccountAlias'  , 'Transaction Details' ,   0,  'whitel', '1.0' ),
+        ])
+        return nature_of_columns
 
 ##################################################################################
 # Category

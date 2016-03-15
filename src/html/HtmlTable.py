@@ -68,9 +68,9 @@ class AbstractMethods(object):
 ########################################################################
 class Base(AbstractMethods):
 
-    def __init__(self, db_in, hide_detail_columns=False, folder_out=None):
+    def __init__(self, db_in, hide_detail_columns=False, htmlfullpath=None):
         self.db_in = db_in
-        self.folder_out = folder_out
+        self.htmlfullpath = htmlfullpath
         self.sectionChange = db_in.sectionChange()        
         self.subsectionChange = db_in.subsectionChange()        
         self.hide_detail_columns = hide_detail_columns
@@ -361,11 +361,8 @@ class Base(AbstractMethods):
     #===========================================================================
     def createHtmlTables(self, csv_file):
 
-        if self.folder_out == None:
-            html_folder = csv_file.folder + '/html'
-        else:
-            html_folder = self.folder_out
-        html_fullpath = html_folder + '/out.html'
+        html_fullpath = self.htmlfullpath
+        html_folder =  os.path.dirname(html_fullpath)
 
         touchFolder(html_folder)
 

@@ -34,6 +34,13 @@ from db.finance import Finance, Original, Essence
 # main
 #===============================================================================
 if __name__ == '__main__':
+    from MasterControlFinance import *    
+    
+    mc = MasterControlFinance()
+    mc.process()
+    
+if __name__ == '__mainn__':
+
 
     folder_beyond_banking = \
     "/home/orig/kurt/Documents/institutions/original/ml-beyondbanking/downloaded2016-03-10" 
@@ -168,5 +175,12 @@ if __name__ == '__main__':
     os.rename(
         os.getcwd()+'/out/publish/out.html',
         os.getcwd()+'/out/publish/AccountsSummary.html')
+
+    # accounts            
+    view = Finance.ViewStudy(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/Study.html')
  
 exit()

@@ -670,7 +670,7 @@ class Model(Transformer):
 #===============================================================================
 # View (abstract)
 #    The constructor transforms a Model Db by sorting and sectioning the
-#    Model Db into a useful view of the databas.
+#    Model Db into a useful view of the database.
 #===============================================================================
 class ViewAbstract(Abstract):
 

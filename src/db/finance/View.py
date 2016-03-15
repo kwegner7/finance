@@ -141,6 +141,16 @@ class ViewFinance(View):
         return True
         return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 
+    def ignoreThisTransaction(self, row):
+        ignore = (
+            (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and row["Account"] == "Capital One")      
+            or
+            (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Chase") 
+            or
+            (row["Category"] == "Banking" and row["Subcategory"] != "Cash Withdrawal") 
+        )  
+        return False
+
     def transform(self, this_row, next_row):
         row_out = dict(this_row)
 
@@ -150,12 +160,11 @@ class ViewFinance(View):
             else:
                 pass #print this_row['Year'], next_row['Year']
         
-        row_out['CountRunning'] = self.count_running.accumulate(this_row)
-        row_out['CountSection'] = self.count_section.accumulate(this_row)
-        row_out['CountSubsection'] = self.count_subsection.accumulate(this_row)
 
-        if (not     (this_row["Category"] == "Credit Card" and this_row["Subcategory"] == "Pay Credit Card" and  this_row["Account"] == "Capital One")      
-            and not (this_row["Category"] == "Credit Card" and this_row["Subcategory"] == "Pay Credit Card" and  this_row["Account"] == "Chase") ):    
+        if not self.ignoreThisTransaction(this_row):
+            row_out['CountRunning'] = self.count_running.accumulate(this_row)
+            row_out['CountSection'] = self.count_section.accumulate(this_row)
+            row_out['CountSubsection'] = self.count_subsection.accumulate(this_row)
 
             row_out['TotalRunning'] = self.total_running.accumulate(this_row)
             row_out['DebitRunning'] = self.debit_running.accumulate(this_row)
@@ -177,6 +186,10 @@ class ViewFinance(View):
         else:
 
             print "Skipping", this_row["Category"], this_row["Subcategory"], this_row["Account"], this_row["Date"], this_row["Amount"]
+            row_out['CountRunning'] = self.count_running.get()
+            row_out['CountSection'] = self.count_section.get()
+            row_out['CountSubsection'] = self.count_subsection.get()
+
             row_out['TotalRunning'] = self.total_running.get()
             row_out['DebitRunning'] = self.debit_running.get()
 
@@ -226,7 +239,27 @@ class ViewMonthSummary(ViewMonth):
     def htmlPresentation(self, dirpath):
         HtmlMonthSummary(self, dirpath)
         return
-           
+          
+#===============================================================================
+# Study
+#===============================================================================
+__all__ += ["ViewStudy"]
+class ViewStudy(ViewFinance):
+
+    def sortBeforeTransform(self): 
+        return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
+        
+    def subsectionChange(self):
+        return list([ 'Year', ])
+
+    def sectionChange(self):
+        return list([ 'Year', ])
+        
+    def htmlPresentation(self, dirpath):
+        HtmlStudyDetails(self, dirpath)
+        return
+
+          
 #===============================================================================
 # Category
 #===============================================================================

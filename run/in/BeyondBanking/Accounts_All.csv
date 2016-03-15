@@ -56,7 +56,7 @@ ANDREWSCANDIES`Andrews Candies`Food`Eating Out
 ANDYSPLUMBING`Andys Plumbing`House Expense CO`House Maintenance
 APLITUNESCOMBILL`iTunes Purchase`Other Purchase`Cloud Purchase
 COMBI`iTunes Purchase`Other Purchase`Cloud Purchase
-APLAPPLEONLINESTORE`Apple Online Store`Other Purchase`Cloud Purchase
+APLAPPLEONLINESTORE`Apple Online Store`Other Purchase`Computer/Electronics
 APPLEBEES`APPLEBEES`Food`Eating Out
 APPLEGROVEDENTAL`Apple Grove Dental`Medical/Dental`Dentist
 BENTELEORTHODONTICS`Bentele Orthodontics`Medical/Dental`Dentist
@@ -98,7 +98,7 @@ AUTOZONE`Autozone`Car Expense`Auto Repair
 AUTOZONEWOODLANDPARKCOUS`Autozone`Car Expense`Auto Repair
 ATANDTINTERNET`ATT Internet Service`House Expense CO`Utilities
 ATTINTERNETSVC`ATT Internet Service`House Expense CO`Utilities
-BAJABROADBAND`Baja Broadband`House Expense CO`Utilities
+BAJABROADBAND`Internet - Baja Broadband`House Expense CO`Utilities
 BAKERSBAKERYANDCAFE`Bakers Bakery`Food`Eating Out
 BAKERSBAKERYANDCAFECUSTERSDUS`Bakers Bakery`Food`Eating Out
 BALISEHYANNISCARW`BALISE HYANNIS CAR WASH (MA)`Car Expense`Auto Repair
@@ -130,7 +130,7 @@ BIGYBETHEL`Big Y Bethel`Food`Grocery Store`
 BIGOTIRES`BIG O TIRES (CO)`Car Expense`Auto Repair
 BILLPEARSON`Bill Pearson`House Expense CO`House Maintenance
 BKOFAMCRDACH`Bank of America`Credit Card`Pay Credit Card
-BLACKHILLSUTLH`Black Hills Energy`House Expense CO`Utilities
+BLACKHILLSUTLH`Gas - Black Hills Energy`House Expense CO`Utilities
 BLUEBAYASIANCAFEDENVERCOUS`Blue Bay Asian Cafe`Food`Eating Out
 BLUEBUSTOURS`Blue Bus Tours`Travel`Train/Bus/Taxi
 BLUEMOUNTAIN`BLUEMOUNTAIN GREETING CARDS`Other Purchase`Cloud Purchase
@@ -191,7 +191,7 @@ CIRCUSCIRCUSHOTEL`CIRCUS CIRCUS HOTEL`Travel`Hotel
 CITYMARKET`CITY MARKET`Food`Grocery Store
 CITYOFMANITOUSPRINGSMANITOUSP`CITY OF MANITOU SPRINGS PARKING`Car Expense`Parking and Tolls
 CITYOFSMPARKING`CITY OF SANTA MONICA PARKING`Car Expense`Parking and Tolls
-CITYOFWOODLAND`Woodland Park Water and Sewer`House Expense CO`Utilities
+CITYOFWOODLAND`Water - Woodland Park Water & Sewer`House Expense CO`Utilities
 CITYOFBERKELEYIPS`CITY OF BERKELEY- IPS`Car Expense`Parking and Tolls
 CITYOFMANITOUSPRINGS`CITY OF MANITOU SPRINGS`Car Expense`Parking and Tolls
 CITYPLACEGARAGE`CITY PLACE GARAGE`Car Expense`Parking and Tolls
@@ -206,7 +206,7 @@ COFFEEBEANERY`COFFEE BEANERY (NY)`Food`Eating Out
 COLORADOCUSTARDCO`Colorado Custard Co`Food`Eating Out
 COLORADOGOV`Colorado State Tax`Government Taxes`State
 COLUMBIASPORTSWEAR`COLUMBIA SPORTSWEAR`Clothing`Clothing Store
-COMCAST`Comcast`House Expense MA`Utilities
+COMCAST`Internet - Comcast`House Expense MA`Utilities
 COMFORTINN`COMFORT INN`Travel`Hotel
 COMMONGROUNDCAFE`COMMON GROUND CAFE`Food`Eating Out
 COMPASSIONINTERNATIONAL`Compassion International`Charitable Donations`Missions
@@ -266,18 +266,19 @@ ESIPHARM`ESI Pharmacy`Medical/Dental`Pharmacy
 EVA`Eva Restaurant SLC`Food`Eating Out
 EVENSTEVENSANDWICHESSALTLAKECITUTUS`Even Steven Sandwiches`Food`Eating Out
 EVERGREENDELIPHILADELPHIAPAUS`EVERGREEN DELI (PA)`Food`Eating Out
-EVERSOURCE`Eversouce Electric`House Expense MA`Utilities
+EVERSOURCE`Electricity - Eversouce Electric`House Expense MA`Utilities
 EXELISSYSTEMSC`ITT Exelis`Income`Salary
 EXPRESSRAILLINKKLIASEPANGMY`EXPRESS RAIL LINK MALAYSIA`Travel`Train/Bus/Taxi
 EXXONMOBIL`Exxon Mobile`Car Expense`Gas Station
 FAIRVIEWFUELDEPOTGOLETACAUS`Fairview Fuel`Car Expense`Gas Station
 FAMOUSFOOTWEARCOLORADOSPRICOUS`FAMOUS FOOTWEAR (CO)`Clothing`Shoe Store
 FANTASYFAIRELAKEBUENAVIFLUS`DISNEY FANTASY FAIRE (FL)`Other Purchase`Gift Shop
-FARMERSINS`FARMERS INS BILLING`House Expense CO`House Insurance
+FARMERSINSBILLING`Farmers Insurance Auto`Car Expense`Auto Insurance
+FARMERSINS`Farmers Insurance House`House Expense CO`House Insurance
 FATBRAINTOYS`FAT BRAIN TOYS`Other Purchase`Gift Shop
 FEDEXOFFICE`FEDEX`Other Purchase`Fedex
-FORESTKEEPERST`Forest Keepers`House Expense MA`House Maintenance
-FORESTKEEPRSTR`Forest Keepers`House Expense MA`House Maintenance
+FORESTKEEPERST`Yard - Forest Keepers`House Expense MA`House Maintenance
+FORESTKEEPRSTR`Yard - Forest Keepers`House Expense MA`House Maintenance
 FOREVERXXI`Forever XXI`Clothing`Clothing Store
 FOXRENTACAR`FOX RENT A CAR`Travel`Rental Car
 FRESHSTART`Fresh Start`Food`Eating Out
@@ -298,12 +299,12 @@ GLIPPINTERNETTXUS`INTERNET SERVICE (CO)`House Expense CO`Utilities
 GO!CALENDARSGAMESBOOKSCASTLEROCKCOUS`GO! CALENDARS GAMES BOOKS CASTLE ROCK`Other Purchase`Gift Shop
 GOLDENFOUNTAINRESTAURAN`GOLDEN FOUNTAIN RESTAURANT`Food`Eating Out
 GOLDHILLJAVA`GOLD HILL JAVA`Food`Eating Out
-GOWIRELESS`Go Wireless`House Expense CO`Utilities
+GOWIRELESS`Cell Phone - Verizon`House Expense CO`Utilities
 GRANDCYNNPSOUTHES`GRAND CANYON TICKET`Entertainment`Site Seeing/Museums/Parks
 GRANDMOTHERSKITCHE`Grandmothers Kitchen`Food`Eating Out
 GRAYLINENIAGARAFALLSNIAGARAFALLSNYUS`GRAY LINE NIAGARA FALLS`Entertainment`Site Seeing/Museums/Parks
 GREATTASTEBAKERYANDREBOSTON`Great Taste Bakery`Food`Eating Out
-GREENLAWNTREAT`Green Lawn Treatment`House Expense MA`House Maintenance
+GREENLAWNTREAT`Yard - Green Lawn Treatment`House Expense MA`House Maintenance
 GREYHOUND`GREYHOUND BUS`Travel`Train/Bus/Taxi
 GRNDCYNASSNYAVAPAI`GRAND CANYON STORE`Other Purchase`Gift Shop
 GUESSCASTLEROCK`GUESS CASTLE ROCK`Clothing`Clothing Store
@@ -327,17 +328,17 @@ HUDSONNEWSPENNNEWYORKNYUS`HUDSON NEWS PENN (NY)`Other Purchase`Book Store
 HUNGRYBEAR`HUNGRY BEAR RESTAURANT WP`Food`Eating Out
 HUNTINGTONADMISSIONS`HUNTINGTON GARDENS`Entertainment`Site Seeing/Museums/Parks
 HUNTINGTONBOOKSTORE`HUNTINGTON BOOKSTORE`Other Purchase`Gift Shop
-HYANNISWATERMA`Hyannis Water`House Expense MA`Utilities
-ICIBARNSTABLE`Barnstable Property Tax`House Expense MA`Property Tax
-ICIFEEBRSTBLWEBPMT`Barnstable Water`House Expense MA`Utilities
-ICITOWNOFBARNSTABLE`Barnstable Property Tax`House Expense MA`Property Tax
+HYANNISWATERMA`Water - Hyannis Water`House Expense MA`Utilities
+ICIBARNSTABLE`Property Tax - Barnstable`House Expense MA`Property Tax
+ICIFEEBRSTBLWEBPMT`Other Fees - Barnstable`House Expense MA`Utilities
+ICITOWNOFBARNSTABLE`Property/Vehicle Excise Tax - Barnstable`House Expense MA`Property Tax
 IMPERIALPALACERESTSANFRANCISCO`Imperial Palace`Food`Eating Out
 INCHEYENNEDEPOTMUSEUMWYUS`Cheyenne Depot Museum`Other Purchase`Gift Shop
 INDEPENDENTAUTOREPAIR`INDEPENDENT AUTO REPAIR (MA)`Car Expense`Auto Repair
-INTERMOUNTAINRU`IREA`House Expense CO`Utilities
+INTERMOUNTAINRU`Electricity - IREA`House Expense CO`Utilities
 INTUITTURBOTAX`TURBOTAX`Government Taxes`TurboTax
 INVOICECLOUDTAX`Other Tax Account`Government Taxes`TurboTax
-IREA`IREA`House Expense CO`Utilities
+IREA`Electricity - IREA`House Expense CO`Utilities
 IRS`IRS TAX PAYMENT`Government Taxes`Federal
 IRSTREAS`IRS TAX PAYMENT`Government Taxes`Federal
 ISLANDSUPPLYLAKEBUENAVIFLUS`ISLAND SUPPLY LAKE (FL)`Food`Eating Out
@@ -355,7 +356,7 @@ JOANNFABRIC`JOANN FABRIC`Other Purchase`Department Store
 JOHNATENCIO`JOHN ATENCIO GOLDSMITH`Clothing`Jewelry Store
 JOHNHARNISH`John Harnish`House Expense CO`House Maintenance
 JOHNSONBUILDING`Tim Johnson Building`House Expense MA`House Maintenance
-JOHNVIOLA`John Viola`House Expense MA`House Maintenance
+JOHNVIOLA`Yard - John Viola`House Expense MA`House Maintenance
 JOLLYHOLIDAYBAKER`JOLLY HOLIDAY BAKERY DISNEYLAND`Food`Eating Out
 JUDDSGLASSMIR`JUDD'S GLASS & MIRROR`Car Expense`Auto Repair
 KARLWEGNER`Karl Wegner`Other Purchase`Family and Friends
@@ -398,8 +399,8 @@ MATTHEWNAKAMURA`Matthew Nakamura`Other Purchase`Family and Friends
 MAVERIK`MAVERIK SALT LAKE CITY`Entertainment`Site Seeing/Museums/Parks
 MAXWELLSTATION`Maxwell Station`Food`Eating Out
 MAYFLOWERCHINESEREST`MAYFLOWER CHINESE RESTAURANT`Food`Eating Out
-MCCEBILL`Hyannis Water`House Expense MA`Utilities
-MCCHYANNISWATER`Hyannis Water`House Expense MA`Utilities
+MCCEBILL`Water - Hyannis Water`House Expense MA`Utilities
+MCCHYANNISWATER`Water - Hyannis Water`House Expense MA`Utilities
 MCDONALDS`MCDONALD'S`Food`Eating Out
 METROLINK`Metrolink`Travel`Train/Bus/Taxi
 MICHAELSSTORES`Michaels`Other Purchase`Department Store
@@ -413,7 +414,7 @@ MONARCHMOUNTAINRENTAL`MONARCH MOUNTAIN SKI`Entertainment`Skiing
 MONARCHONMOUNTAINTICKE`MONARCH MOUNTAIN SKI`Entertainment`Skiing
 MONTHLYAMTISSUED`ML Investment Account`Banking`Investment Interaction with BB
 MORRISONMOTORWORKS`MORRISON MOTOR WORKS HYANNIS`Car Expense`Auto Repair
-MORTGAGELN`Fifth Third Bank`House Expense CO`Mortgage/Property Tax/Insurance
+MORTGAGELN`Pay Mortgage Fifth Third Bank`House Expense CO`Mortgage
 MOTELWILLIAMSVILLENYUS`MOTEL 6 (NY)`Travel`Hotel
 MOUNTAINHARDWEAR`MOUNTAIN HARDWEAR SKI`Entertainment`Skiing
 MOUNTRUSHMOREHISKEYSTONESDUS`Mt Rushmore`Entertainment`Site Seeing/Museums/Parks
@@ -427,7 +428,7 @@ MTRUSHMOREGIFTSHOPKEYSTONESDUS`Mt Rushmore Gift`Other Purchase`Gift Shop
 MUNCHYSGOURMETMARKETNEWYORKNYUS`MUNCHYS GOURMET MARKET (NY)`Food`Eating Out
 MYFAVORITEMUFFIN`My Favorite Muffin`Food`Eating Out
 MYSWEETESCAPE`My Sweet Escape`Food`Eating Out
-NATIONALGRIDNE`National Grid`House Expense MA`Utilities
+NATIONALGRIDNE`Gas - National Grid`House Expense MA`Utilities
 NATURALBREAK`Natural Break`Food`Eating Out
 NAVAJOHOPIINDIANART`NAVAJO HOPI INDIAN ART`Other Purchase`Gift Shop
 NBSSERVFEECOUS`NBS SERV FEE (CO)`Entertainment`Site Seeing/Museums/Parks
@@ -443,7 +444,7 @@ NOODLESCO`NOODLES & CO (CO)`Food`Eating Out
 NORDSTROMRACK`NORDSTROM RACK DEPT STORE`Clothing`Clothing Store
 NORENWOODCASCADE`Norenwood Cascade`Other Purchase`Department Store
 NORTHSTREETAUTOREPAIR`North Street Auto Repair`Car Expense`Auto Repair
-NSTAR`NSTAR`House Expense MA`Utilities
+NSTAR`Gas - NSTAR`House Expense MA`Utilities
 OCINTERNATIONAL`Hank and Cathy Pott`Charitable Donations`Missions
 OCINTL`Hank and Cathy Pott`Charitable Donations`Missions
 OFFICEMAX`OFFICE MAX`Other Purchase`Computer/Electronics
@@ -561,7 +562,7 @@ SZPETROLEUMINC`S & Z PETROLEUM INC GAS STATION`Car Expense`Gas Station
 TACOBELL`Taco Bell`Food`Eating Out
 TARGET`Target Dept Store`Other Purchase`Department Store
 TAXPRODUCTSPE`Federal Government`Government Taxes`Federal
-TDS`TDS`House Expense CO`Utilities
+TDS`Internet - TDS`House Expense CO`Utilities
 TENDERGREENS`Tender Greens`Food`Eating Out
 TERMINALSTALOSANGELESCAUS`TERMINAL 1 LAX`Food`Eating Out
 THAIHOUSEHYANNIS`Thai House Hyannis`Food`Eating Out
@@ -588,14 +589,14 @@ TIGERAIR`Tiger Air`Travel`Airplane
 TIKIJUICEBARDL`DISNEYLAND TIKI JUICE BAR`Food`Eating Out
 TIMESTRAVELTASSINGAPORESG`Times Travel Singapore`Entertainment`Site Seeing/Museums/Parks
 TJMAXX`TJMAXX DEPT STORE`Clothing`Clothing Store
-TMOWALMARTMOBILEAUTO`WALMART MOBILE PHONE`House Expense CO`Utilities
+TMOWALMARTMOBILEAUTO`Cell Phone - Walmart`House Expense CO`Utilities
 TOBYKEITHSILOVETH`TOBY KEITH'S RESTAURANT LA`Food`Eating Out
 TOLLSWESTPARKIN`DISNEYLAND PARKING`Entertainment`Amusement Park
 TOMORROWLANDTERRAC`DISNEYLAND RESTAURANT`Food`Eating Out
 TOONTOWNDL`DISNEYLAND TOONTOWN RESTAURANT`Food`Eating Out
 TOPSMARKETSNIAGARAFALLSNYUS`TOPS MARKETS NIAGARA FALLS`Food`Grocery Store
 TOTALDIVINTPAYMENTS`ML Investment Account`Banking`Merryl Lynch
-TOWNOFBARNSTAB`Town of Barnstable MA`House Expense MA`Property Tax
+TOWNOFBARNSTAB`Property Tax - Barnstable MA`House Expense MA`Property Tax
 TRACTORSUPPLYCOWOODLANDPARKCOUS` Tractor Supply WP`Other Purchase`Hardware Store
 TRADERJOES`TRADER JOE'S GROCERY STORE`Food`Grocery Store
 TRANSASSETALLGRWAACCUMFORMONTHLYCK`ML Investment Account`Banking`Merryl Lynch
@@ -626,20 +627,20 @@ USPSPOBOXESDCUS`POST OFFICE`Other Purchase`Post Office
 USPS`POST OFFICE`Other Purchase`Post Office
 USPSWOODLANDPARKCOUS`POST OFFICE`Other Purchase`Post Office
 USTREASURY`Federal Government`Government Taxes`Federal
-VANGUARDDERM`Vanguard Demotology`Medical/Dental`Dermatology`
+VANGUARDDERM`Vanguard Dermatology`Medical/Dental`Dermatology`
 VANHEUSEN`Van Heusen Clothing`Clothing`Clothing Store
 VANNUYSFLYAWAYSHUTTLE`Van Nuys Flyaway Shuttle`Travel`Train/Bus/Taxi
 VANSCULVERCITY`Misc Account`Clothing`Shoe Store
 VEHICLEREGISTRATI`Vehicle Registration`Car Expense`Vehicle Registration
-VERIZONWIRELESS`Verizon`House Expense CO`Utilities
+VERIZONWIRELESS`Cell Phone - Verizon`House Expense CO`Utilities
 VICSHEATING`Vic's Heating`House Expense CO`House Maintenance`
 VIETNAMESEEVANG`Vietnamese Evangelical Church`Charitable Donations`Churches
-VIOLAASSNINC`Viola Associates`House Expense MA`House Maintenance
-VIOLAASSOCIATES`Viola Associates`House Expense MA`House Maintenance
+VIOLAASSNINC`Yard - Viola Associates`House Expense MA`House Maintenance
+VIOLAASSOCIATES`Yard - Viola Associates`House Expense MA`House Maintenance
 VOIDDIVDCHECKISSDCHECKRETURNEDUNDELIVERABLEBYPOSTOFFICE`Check Returned By Post Office`Banking `Check Voided
 WALGREENS`WALGREENS DRUG STORE`Other Purchase`Drug Store
 WALMART`Walmart Dept Store`Other Purchase`Department Store
-WASTEMANAGEMENT`Waste Management`House Expense CO`Utilities
+WASTEMANAGEMENT`Trash - Waste Management`House Expense CO`Utilities
 WENDYS`WENDY'S`Food`Eating Out
 WESTERNCONVENIENCEWOODLANDPARKCOUS`Western Convenience Gas`Car Expense`Gas Station
 WHOLEFDS`WHOLE FOODS GROCERY STORE`Food`Grocery Store
@@ -656,7 +657,7 @@ WOODLANDPARKBIGOTIRES`BIG O TIRES WOODLAND PARK`Car Expense`Auto Repair
 WOODLANDPARKCOMMUNITYC`WPCC - Marital Seminar`Other Purchase`Misc
 WOODLANDPARKCO`Woodland Park Community Church`Charitable Donations`Churches
 WOODLANDPARKDENTALGROU`WOODLAND PARK DENTAL GROUP`Medical/Dental`Dentist
-WOODLANDPARK`Woodland Park Water and Sewer`House Expense CO`Utilities
+WOODLANDPARK`Water - Woodland Park Water & Sewer`House Expense CO`Utilities
 WOODYCREEKBAKERY`WOODY CREEK BAKERY`Food`Eating Out
 WORLDGOSPELMIS`World Gospel Mission`Charitable Donations`Missions
 WORLDOFDISNEYD`WORLD OF DISNEY GIFT STORE`Other Purchase`Gift Shop
@@ -795,10 +796,10 @@ WHTHSBLKMKT`WHT HS BLK MKT #3567`Food `Grocery Store
 DAVISTOWING`DAVIS TOWING`Car Expense `Auto Repair
 DINOSAURRESOURCECENTER`DINOSAUR RESOURCE CENTER`Entertainment`Site Seeing/Museums/Parks
 FASHIONQ`FASHION Q`Clothing `Clothing Store
-FEDEX`FEDEX`Other Purchase `Fedex
-FIFTHTHIRDBANK`Fifth Third Bank`House Expense CO`Mortgage/Property Tax/Insurance
-MTGSVCS`Pay ML Mortgage`House Expense CO`Mortgage/Property Tax/Insurance
-PHHMORTGAGE`Pay ML Mortgage`House Expense CO`Mortgage/Property Tax/Insurance
+FEDEX`FEDEX`Other Purchase `Misc
+FIFTHTHIRDBANK`Pay Mortgage Fifth Third Bank`House Expense CO`Mortgage
+MTGSVCS`Pay Mortgage ML`House Expense CO`Mortgage
+PHHMORTGAGE`Pay Mortgage ML`House Expense CO`Mortgage
 FOREIGNTRANSACTIONFEE`ATM FEE`Banking`Cash Withdrawal
 FRANCHISETAXBD`California State Tax`Government Taxes `State
 FREDSTOWING`FRED'S TOWING`Car Expense `Auto Repair

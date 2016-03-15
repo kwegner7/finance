@@ -78,6 +78,8 @@ class ViewSubCategorySummary(View.ViewSubCategorySummary): pass
 class ViewAccounts(View.ViewAccounts): pass
 class ViewAccountsSummary(View.ViewAccountsSummary): pass
 
+class ViewStudy(View.ViewStudy): pass
+
 #===============================================================================
 # Conversion from Essence to the Model
 #===============================================================================

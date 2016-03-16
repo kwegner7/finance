@@ -533,6 +533,9 @@ class Abstract():
     __metaclass__ = ABCMeta
 
 class TransformerAbstract(Abstract):
+
+    @abstractmethod
+    def isSelectedRow(self, row): pass
     
     @abstractmethod
     def fieldNames(self): pass
@@ -545,9 +548,6 @@ class TransformerAbstract(Abstract):
 
     @abstractmethod
     def transform(self, this_row, next_row): pass
-    
-    @abstractmethod
-    def isSelectedRow(self, row): pass
     
     @abstractmethod
     def sortAfterTransform(self): pass 
@@ -627,15 +627,14 @@ class Transformer(Db, TransformerAbstract):
 #===============================================================================
 __all__ += ['Essence']
 class Essence(Transformer):
+
+    def isSelectedRow(self, row): return True
     
-    # implementations of abstract methods     
     def initializeTransform(self): return
 
     def sortBeforeTransform(self): return list([])
     
     def sortAfterTransform(self): return list([])
-
-    def isSelectedRow(self, row): return True
 
     def collapseOnFields(self): return list([])
 
@@ -651,14 +650,13 @@ class Essence(Transformer):
 __all__ += ['Model']
 class Model(Transformer):
         
-    # implementations of abstract methods     
+    def isSelectedRow(self, row): return True
+    
     def initializeTransform(self): return
 
     def sortBeforeTransform(self): return list([])
     
     def sortAfterTransform(self): return list([])
-
-    def isSelectedRoww(self, row): return True
 
     def collapseOnFields(self): return list([])
                 

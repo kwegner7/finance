@@ -60,22 +60,6 @@ class ModelFinance(Model):
     def fieldNames(self):
         return self.field_names
 
-    # FIXTHIS
-    def isSelectedRow(self, row):
-        print "WARNING: executing isSelectedRow in model.py"
-        partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
-        ignore_partial_first_month = (partial_first_month == row["YearMonth"])
-        return (
-            not     (row["Category"] == "Banking" and row["Subcategory"] == "ML Internal Transfer") 
-            and not (row["Category"] == "Banking" and row["Subcategory"] == "Wire In") 
-            and not (row["Category"] == "Banking" and row["Subcategory"] == "Check Deposit" and  row["Amount"] == "123,755.05") 
-            and not (row["Category"] == "Charitable Donations" and row["Subcategory"] == "Wire Out" and  row["Amount"] == "-200,000.00") 
-            and not (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Capital One")      
-            and not (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Chase" and  row["Date"] > "2013-07-19")      
-            and not ignore_partial_first_month     
-        )
-        return True
-
     def sortBeforeTransform(self): 
         return list([ 'Date', 'Amount' ])
 

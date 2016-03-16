@@ -96,29 +96,16 @@ class Model(Db.Model):
     def fieldNames(self):
         return FieldNames.model
 
-    def isSelectedRoww(self, row):
-        partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
-        ignore_partial_first_month = (partial_first_month == row["YearMonth"])
-        return (
-            not     (row["Category"] == "Banking" and row["Subcategory"] == "ML Internal Transfer") 
-            and not (row["Category"] == "Banking" and row["Subcategory"] == "Wire In") 
-            and not (row["Category"] == "Banking" and row["Subcategory"] == "Check Deposit" 
-                and  row["Amount"] == "123,755.05") 
-            and not (row["Category"] == "Charitable Donations" 
-                and  row["Subcategory"] == "Wire Out" and  row["Amount"] == "-200,000.00") 
-            and not (row["Category"] == "Credit Card" 
-                and  row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Capital One")      
-            and not (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" 
-                and  row["Account"] == "Chase" and  row["Date"] > "2013-07-19")      
-            and not ignore_partial_first_month     
-        )
-        return True
 
-    # FIXTHIS
-    def isSelectedRow(self, row):
-        return row['Year'] == '2015'
-        return True
-        return row["Date"] > "2014-03-09" and row['Year'] == '2015'
+    def ignoreThisTransaction(self, row):
+        ignore = (
+            (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and row["Account"] == "Capital One")      
+            or
+            (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Chase") 
+            or
+            (row["Category"] == "Banking" and row["Subcategory"] != "Cash Withdrawal") 
+        )  
+        return False
 
     def sortBeforeTransform(self): 
         return list([ 'Date', 'Amount' ])
@@ -234,3 +221,69 @@ class OrigMint(Db.Reference):
             essence['Institution'] = this_row['Account Name']
         return True, essence
                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+OBSOLETE
+
+    # FIXTHIS
+    def isSelectedRow(self, row): 
+        return True
+        return row["Date"] > "2014-03-09" and row['Year'] == '2015'
+
+
+    # FIXTHIS
+    def isSelectedRow(self, row):
+        print "WARNING: executing isSelectedRow in model.py"
+        partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
+        ignore_partial_first_month = (partial_first_month == row["YearMonth"])
+        return (
+            not     (row["Category"] == "Banking" and row["Subcategory"] == "ML Internal Transfer") 
+            and not (row["Category"] == "Banking" and row["Subcategory"] == "Wire In") 
+            and not (row["Category"] == "Banking" and row["Subcategory"] == "Check Deposit" and  row["Amount"] == "123,755.05") 
+            and not (row["Category"] == "Charitable Donations" and row["Subcategory"] == "Wire Out" and  row["Amount"] == "-200,000.00") 
+            and not (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Capital One")      
+            and not (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Chase" and  row["Date"] > "2013-07-19")      
+            and not ignore_partial_first_month     
+        )
+        return True
+
+
+    # FIXTHIS
+    def isSelectedRow(self, row):
+        return True
+        return row['Year'] == '2015' # and not self.ignoreThisTransaction(row)
+        return row["Date"] > "2014-03-09" and row['Year'] == '2015'
+
+
+    def isSelectedRoww(self, row):
+        partial_first_month = Container.convertStandardDateToYearMonth(self.first_row['Date'])
+        ignore_partial_first_month = (partial_first_month == row["YearMonth"])
+        return (
+            not     (row["Category"] == "Banking" and row["Subcategory"] == "ML Internal Transfer") 
+            and not (row["Category"] == "Banking" and row["Subcategory"] == "Wire In") 
+            and not (row["Category"] == "Banking" and row["Subcategory"] == "Check Deposit" 
+                and  row["Amount"] == "123,755.05") 
+            and not (row["Category"] == "Charitable Donations" 
+                and  row["Subcategory"] == "Wire Out" and  row["Amount"] == "-200,000.00") 
+            and not (row["Category"] == "Credit Card" 
+                and  row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Capital One")      
+            and not (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" 
+                and  row["Account"] == "Chase" and  row["Date"] > "2013-07-19")      
+            and not ignore_partial_first_month     
+        )
+        return True
+'''

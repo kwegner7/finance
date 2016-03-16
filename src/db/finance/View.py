@@ -29,9 +29,6 @@ class ViewGeneric(View):
     def fieldNames(self):
         return list([ 'Count' ]) + self.master_fields
         
-    def isSelectedRoww(self, row):
-        return True
-
     def initializeTransform(self):
         self.count_running = 0
     
@@ -136,10 +133,6 @@ class ViewFinance(View):
         self.total_category = Db.Total(['Category'])
         return
 
-    # FIXTHIS
-    def isSelectedRow(self, row): 
-        return True
-        return row["Date"] > "2014-03-09" and row['Year'] == '2015'
 
     def ignoreThisTransaction(self, row):
         ignore = (
@@ -150,6 +143,8 @@ class ViewFinance(View):
             (row["Category"] == "Banking" and row["Subcategory"] != "Cash Withdrawal") 
         )  
         return False
+        return ignore
+
 
     def transform(self, this_row, next_row):
         row_out = dict(this_row)
@@ -213,12 +208,28 @@ class ViewFinance(View):
     def htmlPresentation(self, dirpath):
         HtmlModern(self, dirpath)
         return
+
+#===============================================================================
+# ignore these transactions
+#===============================================================================
+class ViewIgnore(ViewFinance):
+    
+    def isSelectedRow(self, row):
+        ignore = (
+            (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and row["Account"] == "Capital One")      
+            or
+            (row["Category"] == "Credit Card" and row["Subcategory"] == "Pay Credit Card" and  row["Account"] == "Chase") 
+            or
+            (row["Category"] == "Banking" and row["Subcategory"] != "Cash Withdrawal") 
+        )  
+        return not ignore and row['Year'] == '2015'
+
                 
 #===============================================================================
 # Month/Year
 #===============================================================================
 __all__ += ["ViewMonth"]
-class ViewMonth(ViewFinance):
+class ViewMonth(ViewIgnore):
 
     def sortBeforeTransform(self): 
         return list([ 'Year', 'YearMonth', 'Date' ])
@@ -244,7 +255,7 @@ class ViewMonthSummary(ViewMonth):
 # Study
 #===============================================================================
 __all__ += ["ViewStudy"]
-class ViewStudy(ViewFinance):
+class ViewStudy(ViewIgnore):
 
     def sortBeforeTransform(self): 
         return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
@@ -264,7 +275,7 @@ class ViewStudy(ViewFinance):
 # Category
 #===============================================================================
 __all__ += ["ViewCategory"]
-class ViewCategory(ViewFinance):
+class ViewCategory(ViewIgnore):
 
     def sortBeforeTransform(self): 
         return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
@@ -290,7 +301,7 @@ class ViewCategorySummary(ViewCategory):
 # Subcategory
 #===============================================================================
 __all__ += ["ViewSubCategory"]
-class ViewSubCategory(ViewFinance):
+class ViewSubCategory(ViewIgnore):
 
     def sortBeforeTransform(self): 
         return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
@@ -316,7 +327,7 @@ class ViewSubCategorySummary(ViewSubCategory):
 # Accounts
 #===============================================================================
 __all__ += ["ViewAccounts"]
-class ViewAccounts(ViewFinance):
+class ViewAccounts(ViewIgnore):
 
     def sortBeforeTransform(self): 
         return list([ 'Year', 'Category', 'Subcategory', 'Account', 'Date' ])
@@ -343,7 +354,7 @@ class ViewAccountsSummary(ViewAccounts):
 # ViewYearSummary (may be instantiated) 
 #===============================================================================
 __all__ += ["ViewYearSummary"]
-class ViewYearSummary(ViewFinance):
+class ViewYearSummary(ViewIgnore):
 
     def sortBeforeTransform(self): 
         return list([ 'Year', 'YearMonth', 'Date' ])

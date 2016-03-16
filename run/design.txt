@@ -1,0 +1,64 @@
+Finance.OrigMint reference to an original list of transactions
+Finance.Essence  convert to the 6 essence fields of a Finance DB
+then combine several Finance.Essence into a combined Finance.Essence
+Finance.Model add horizontally some convenient fields to the essence
+Finance.ViewMonth perform sort, grouping and print HTML
+
+# Original class defines the fields of Beyond Banking transactions
+    orig = Original.OrigBeyondBanking(csv, Db.CsvFormatStandard)   
+    
+# Essence class converts the Beyond Banking fields into the 6 essence Finance fields
+     bb = Essence.EssenceFinance(orig)          
+     bb.export(os.getcwd()+'/in/BeyondBanking/LATEST_ML.csv') 
+
+# OrigFinance is a reference to LATEST_ML which is now an Essence Finance DB
+    orig = Original.OrigFinance(os.getcwd()+'/in/BeyondBanking/LATEST_ML.csv')   
+
+# EssenceFinanceSorted simply sorts the 6 normal Finance fields in order of Date
+    latest = Essence.EssenceFinanceSorted(orig)          
+    latest.export(os.getcwd()+'/in/BeyondBanking/LATEST_ML_SORTED.csv') 
+
+# OrigEssence is a reference to LATEST_ML_SORTED which is now a sorted essence Finance fields
+    csv = os.getcwd()+'/in/BeyondBanking/LATEST_ML_SORTED.csv'
+    orig = Finance.OrigEssence(csv)  
+    
+# Finance.Essence is the 6 finance essence of Beyond Banking
+    essence = Finance.Essence(orig) 
+    
+    
+
+# This takes a Mint DB and creates these:
+    essence = list([
+        "Institution",
+        "Date",
+        "Amount",
+        "TransferMech1",
+        "TransferMech2",
+        "AccountAlias",
+    ])
+    orig = Finance.OrigMint(mint_capital_one, Db.CsvFormatStandard)   
+    essence.append(Finance.Essence(orig)) 
+         
+    orig = Finance.OrigMint(mint_chase, Db.CsvFormatStandard)   
+    essence.append(Finance.Essence(orig)) 
+
+# Finance.Model horizontally converts essence Finance fields into 6 extra fields 
+    view = model = essence + list([        
+        "Account",
+        "Category",
+        "Subcategory",
+        "SimplifiedAlias",
+        "Year",
+        "YearMonth",
+    ])
+    model = Finance.Model(essence)
+
+    # obtain views of the model 
+    
+    # month           
+    view = Finance.ViewMonth(model)
+    html = view.pages(os.getcwd()+'/out/publish')
+    os.rename(
+        os.getcwd()+'/out/publish/out.html',
+        os.getcwd()+'/out/publish/MonthDetails.html')
+ 
